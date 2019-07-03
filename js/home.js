@@ -13,358 +13,402 @@ var PACMAN_TRAILER_POSITION_Y = 25;
 var PACMAN_TRAILER_POSITION_STEP = 3;
 var PACMAN_TRAILER_MOUNTH_STATE = 3;
 var PACMAN_TRAILER_MOUNTH_STATE_MAX = 6;
-var PACMAN_TRAILER_SIZE = 16;
+var PACMAN_TRAILER_SIZE = 12;
 
 var GHOST_TRAILER_CANVAS_CONTEXT = null;
-var GHOST_TRAILER_BODY_STATE_MAX = 6;
+var GHOST_TRAILER_BODY_STATE_MAX = 8;
 var GHOST_TRAILER_POSITION_STEP = 3;
 
-var GHOST_BLINKY_TRAILER_POSITION_X = 1000;
-var GHOST_BLINKY_TRAILER_POSITION_Y = 25;
-var GHOST_BLINKY_TRAILER_DIRECTION = 3;
-var GHOST_BLINKY_TRAILER_COLOR = "#ed1b24";
-var GHOST_BLINKY_TRAILER_BODY_STATE = 0;
-var GHOST_BLINKY_TRAILER_STATE = 0;
+var GHOST_SPO_TRAILER_POSITION_X = 1000;
+var GHOST_SPO_TRAILER_POSITION_Y = 25;
+var GHOST_SPO_TRAILER_DIRECTION = 3;
+var GHOST_SPO_TRAILER_COLOR = "#ed1b24";
+var GHOST_SPO_TRAILER_BODY_STATE = 0;
+var GHOST_SPO_TRAILER_STATE = 0;
 
-var GHOST_PINKY_TRAILER_POSITION_X = 1035;
-var GHOST_PINKY_TRAILER_POSITION_Y = 25;
-var GHOST_PINKY_TRAILER_DIRECTION = 3;
-var GHOST_PINKY_TRAILER_COLOR = "#feaec9";
-var GHOST_PINKY_TRAILER_BODY_STATE = 1;
-var GHOST_PINKY_TRAILER_STATE = 0;
+var GHOST_FPO_TRAILER_POSITION_X = 1035;
+var GHOST_FPO_TRAILER_POSITION_Y = 25;
+var GHOST_FPO_TRAILER_DIRECTION = 3;
+var GHOST_FPO_TRAILER_COLOR = "#feaec9";
+var GHOST_FPO_TRAILER_BODY_STATE = 1;
+var GHOST_FPO_TRAILER_STATE = 0;
 
-var GHOST_INKY_TRAILER_POSITION_X = 1070;
-var GHOST_INKY_TRAILER_POSITION_Y = 25;
-var GHOST_INKY_TRAILER_DIRECTION = 3;
-var GHOST_INKY_TRAILER_COLOR = "#4adecb";
-var GHOST_INKY_TRAILER_BODY_STATE = 2;
-var GHOST_INKY_TRAILER_STATE = 0;
+var GHOST_OVP_TRAILER_POSITION_X = 1070;
+var GHOST_OVP_TRAILER_POSITION_Y = 25;
+var GHOST_OVP_TRAILER_DIRECTION = 3;
+var GHOST_OVP_TRAILER_COLOR = "#4adecb";
+var GHOST_OVP_TRAILER_BODY_STATE = 2;
+var GHOST_OVP_TRAILER_STATE = 0;
 
-var GHOST_CLYDE_TRAILER_POSITION_X = 1105;
-var GHOST_CLYDE_TRAILER_POSITION_Y = 25;
-var GHOST_CLYDE_TRAILER_DIRECTION = 3;
-var GHOST_CLYDE_TRAILER_COLOR = "#f99c00";
-var GHOST_CLYDE_TRAILER_BODY_STATE = 3;
-var GHOST_CLYDE_TRAILER_STATE = 0;
+var GHOST_GREEN_TRAILER_POSITION_X = 1105;
+var GHOST_GREEN_TRAILER_POSITION_Y = 25;
+var GHOST_GREEN_TRAILER_DIRECTION = 3;
+var GHOST_GREEN_TRAILER_COLOR = "#f99c00";
+var GHOST_GREEN_TRAILER_BODY_STATE = 3;
+var GHOST_GREEN_TRAILER_STATE = 0;
 
-function initHome() { 
+var GHOST_NEOS_TRAILER_POSITION_X = 1140;
+var GHOST_NEOS_TRAILER_POSITION_Y = 25;
+var GHOST_NEOS_TRAILER_DIRECTION = 3;
+var GHOST_NEOS_TRAILER_COLOR = "#eb4188";
+var GHOST_NEOS_TRAILER_BODY_STATE = 4;
+var GHOST_NEOS_TRAILER_STATE = 0;
+
+function initHome() {
 	HOME = true;
-	
+
 	GAMEOVER = false;
 	LOCK = false;
 	PACMAN_DEAD = false;
-	
+
 
 	$("#panel").hide();
 	$("#home").show();
 	$("#home h3 em").append( " - " + new Date().getFullYear() );
-	
+
 	$('#help').fadeOut("slow");
-	
+
 	var ctx = null;
 	var canvas = document.getElementById('canvas-home-title-pacman');
 	canvas.setAttribute('width', '115');
 	canvas.setAttribute('height', '100');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	
+
 	var x = 50;
 	var y = 50;
-	
-	ctx.fillStyle = "#fff200";
+
+	ctx.fillStyle = "#f9b200";
 	ctx.beginPath();
 	ctx.arc(x, y, 45, (0.35 - (3 * 0.05)) * Math.PI, (1.65 + (3 * 0.05)) * Math.PI, false);
 	ctx.lineTo(x - 10, y);
 	ctx.fill();
 	ctx.closePath();
-	
+
 	x = 95;
 	y = 50;
-	
+
 	ctx.fillStyle = "#dca5be";
 	ctx.beginPath();
 	ctx.arc(x, y, 10, 0, 2 * Math.PI, false);
 	ctx.fill();
 	ctx.closePath();
-	
-	canvas = document.getElementById('canvas-presentation-blinky');
+
+	canvas = document.getElementById('canvas-presentation-spo');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_BLINKY_COLOR;
+	ctx.fillStyle = GHOST_SPO_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	
-	canvas = document.getElementById('canvas-presentation-pinky');
+
+	canvas = document.getElementById('canvas-presentation-fpo');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_PINKY_COLOR;
+	ctx.fillStyle = GHOST_FPO_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	
-	canvas = document.getElementById('canvas-presentation-inky');
+
+	canvas = document.getElementById('canvas-presentation-ovp');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_INKY_COLOR;
+	ctx.fillStyle = GHOST_OVP_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	
-	canvas = document.getElementById('canvas-presentation-clyde');
+
+	canvas = document.getElementById('canvas-presentation-green');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_CLYDE_COLOR;
+	ctx.fillStyle = GHOST_GREEN_COLOR;
+
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	
+	canvas = document.getElementById('canvas-presentation-neos');
+	canvas.setAttribute('width', '50');
+	canvas.setAttribute('height', '50');
+	if (canvas.getContext) {
+		ctx = canvas.getContext('2d');
+	}
+	ctx.fillStyle = GHOST_NEOS_COLOR;
+	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
+
 	startPresentation();
 }
 
-function startPresentation() { 
+function startPresentation() {
 	$("#presentation *").hide();
-	
-	if (HOME_PRESENTATION_TIMER === -1) { 
+
+	if (HOME_PRESENTATION_TIMER === -1) {
 		HOME_PRESENTATION_STATE = 0;
-		HOME_PRESENTATION_TIMER = setInterval("nextSequencePresentation()", 500);
+		HOME_PRESENTATION_TIMER = setInterval("nextSequencePresentation()", 200);
 	}
 }
-function stopPresentation() { 
+function stopPresentation() {
 
-	if (HOME_PRESENTATION_TIMER != -1) { 
+	if (HOME_PRESENTATION_TIMER != -1) {
 		$("#presentation *").hide();
 		HOME_PRESENTATION_STATE = 0;
 		clearInterval(HOME_PRESENTATION_TIMER);
 		HOME_PRESENTATION_TIMER = -1;
 	}
 }
-function nextSequencePresentation() { 
-	if (HOME_PRESENTATION_STATE === 0) { 
+function nextSequencePresentation() {
+	if (HOME_PRESENTATION_STATE === 0) {
 		$("#presentation-titles").show();
-	} else if (HOME_PRESENTATION_STATE === 2) { 
-		$("#canvas-presentation-blinky").show();
-	} else if (HOME_PRESENTATION_STATE === 4) { 
-		$("#presentation-character-blinky").show();
-	} else if (HOME_PRESENTATION_STATE === 5) { 
-		$("#presentation-name-blinky").show();
-	} else if (HOME_PRESENTATION_STATE === 6) { 
-		$("#canvas-presentation-pinky").show();
-	} else if (HOME_PRESENTATION_STATE === 8) { 
-		$("#presentation-character-pinky").show();
-	} else if (HOME_PRESENTATION_STATE === 9) { 
-		$("#presentation-name-pinky").show();
-	} else if (HOME_PRESENTATION_STATE === 10) { 
-		$("#canvas-presentation-inky").show();
-	} else if (HOME_PRESENTATION_STATE === 12) { 
-		$("#presentation-character-inky").show();
-	} else if (HOME_PRESENTATION_STATE === 13) { 
-		$("#presentation-name-inky").show();
-	} else if (HOME_PRESENTATION_STATE === 14) { 
-		$("#canvas-presentation-clyde").show();
-	} else if (HOME_PRESENTATION_STATE === 16) { 
-		$("#presentation-character-clyde").show();
-	} else if (HOME_PRESENTATION_STATE === 17) { 
-		$("#presentation-name-clyde").show();
+	} else if (HOME_PRESENTATION_STATE === 2) {
+		$("#canvas-presentation-ovp").show();
+	} else if (HOME_PRESENTATION_STATE === 4) {
+		$("#presentation-character-ovp").show();
+	} else if (HOME_PRESENTATION_STATE === 5) {
+		$("#presentation-name-ovp").show();
+	} else if (HOME_PRESENTATION_STATE === 6) {
+		$("#canvas-presentation-fpo").show();
+	} else if (HOME_PRESENTATION_STATE === 8) {
+		$("#presentation-character-fpo").show();
+	} else if (HOME_PRESENTATION_STATE === 9) {
+		$("#presentation-name-fpo").show();
+	} else if (HOME_PRESENTATION_STATE === 10) {
+		$("#canvas-presentation-spo").show();
+	} else if (HOME_PRESENTATION_STATE === 12) {
+		$("#presentation-character-spo").show();
+	} else if (HOME_PRESENTATION_STATE === 13) {
+		$("#presentation-name-spo").show();
+	} else if (HOME_PRESENTATION_STATE === 14) {
+		$("#canvas-presentation-green").show();
+	} else if (HOME_PRESENTATION_STATE === 16) {
+		$("#presentation-character-green").show();
+	} else if (HOME_PRESENTATION_STATE === 17) {
+		$("#presentation-name-green").show();
+	} else if (HOME_PRESENTATION_STATE === 18) {
+		$("#canvas-presentation-neos").show();
+	} else if (HOME_PRESENTATION_STATE === 19) {
+		$("#presentation-character-neos").show();
+	} else if (HOME_PRESENTATION_STATE === 20) {
+		$("#presentation-name-neos").show();
 	}
-	
-	if (HOME_PRESENTATION_STATE === 17) { 
+
+
+	if (HOME_PRESENTATION_STATE === 20) {
 		clearInterval(HOME_PRESENTATION_TIMER);
 		HOME_PRESENTATION_TIMER = -1;
-		
+
 		startTrailer();
-	} else { 
+	} else {
 		HOME_PRESENTATION_STATE ++;
 	}
 }
 
-function startTrailer() { 
+function startTrailer() {
 
 	var canvas = document.getElementById('trailer');
 	canvas.setAttribute('width', '500');
 	canvas.setAttribute('height', '50');
-	if (canvas.getContext) { 
+	if (canvas.getContext) {
 		PACMAN_TRAILER_CANVAS_CONTEXT = canvas.getContext('2d');
 	}
-	
-	if (HOME_TRAILER_TIMER === -1) { 
+
+	if (HOME_TRAILER_TIMER === -1) {
 		HOME_TRAILER_STATE = 0;
 		HOME_TRAILER_TIMER = setInterval("nextSequenceTrailer()", 20);
 	}
 }
-function stopTrailer() { 
+function stopTrailer() {
 
-	if (HOME_TRAILER_TIMER != -1) { 
+	if (HOME_TRAILER_TIMER != -1) {
 		$("#presentation *").hide();
 		HOME_TRAILER_STATE = 0;
 		clearInterval(HOME_TRAILER_TIMER);
 		HOME_TRAILER_TIMER = -1;
 	}
 }
-function nextSequenceTrailer() { 
+function nextSequenceTrailer() {
 
 	erasePacmanTrailer();
 	eraseGhostsTrailer();
-	
-	if (PACMAN_TRAILER_MOUNTH_STATE < PACMAN_TRAILER_MOUNTH_STATE_MAX) { 
-		PACMAN_TRAILER_MOUNTH_STATE ++; 
-	} else { 
-		PACMAN_TRAILER_MOUNTH_STATE = 0; 
+
+	if (PACMAN_TRAILER_MOUNTH_STATE < PACMAN_TRAILER_MOUNTH_STATE_MAX) {
+		PACMAN_TRAILER_MOUNTH_STATE ++;
+	} else {
+		PACMAN_TRAILER_MOUNTH_STATE = 0;
 	}
-	if ( PACMAN_TRAILER_DIRECTION === 1 ) { 
+	if ( PACMAN_TRAILER_DIRECTION === 1 ) {
 		PACMAN_TRAILER_POSITION_X += PACMAN_TRAILER_POSITION_STEP;
-	} else if ( PACMAN_TRAILER_DIRECTION === 3 ) { 
+	} else if ( PACMAN_TRAILER_DIRECTION === 3 ) {
 		PACMAN_TRAILER_POSITION_X -= PACMAN_TRAILER_POSITION_STEP;
 	}
-	if ( PACMAN_TRAILER_POSITION_X < -650) { 
+	if ( PACMAN_TRAILER_POSITION_X < -650) {
 		PACMAN_TRAILER_DIRECTION = 1;
 		PACMAN_TRAILER_POSITION_STEP ++;
 	}
-	
-	if (GHOST_BLINKY_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) { 
-		GHOST_BLINKY_TRAILER_BODY_STATE ++;
-	} else { 
-		GHOST_BLINKY_TRAILER_BODY_STATE = 0;
+
+	if (GHOST_SPO_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_SPO_TRAILER_BODY_STATE ++;
+	} else {
+		GHOST_SPO_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_PINKY_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) { 
-		GHOST_PINKY_TRAILER_BODY_STATE ++;
-	} else { 
-		GHOST_PINKY_TRAILER_BODY_STATE = 0;
+	if (GHOST_FPO_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_FPO_TRAILER_BODY_STATE ++;
+	} else {
+		GHOST_FPO_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_INKY_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) { 
-		GHOST_INKY_TRAILER_BODY_STATE ++;
-	} else { 
-		GHOST_INKY_TRAILER_BODY_STATE = 0;
+	if (GHOST_OVP_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_OVP_TRAILER_BODY_STATE ++;
+	} else {
+		GHOST_OVP_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_CLYDE_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) { 
-		GHOST_CLYDE_TRAILER_BODY_STATE ++;
-	} else { 
-		GHOST_CLYDE_TRAILER_BODY_STATE = 0;
-	}				
-	if ( GHOST_BLINKY_TRAILER_DIRECTION === 1 ) { 
-		GHOST_BLINKY_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_BLINKY_TRAILER_DIRECTION === 3 ) { 
-		GHOST_BLINKY_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if (GHOST_GREEN_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_GREEN_TRAILER_BODY_STATE ++;
+	} else {
+		GHOST_GREEN_TRAILER_BODY_STATE = 0;
 	}
-	if ( GHOST_PINKY_TRAILER_DIRECTION === 1 ) { 
-		GHOST_PINKY_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_PINKY_TRAILER_DIRECTION === 3 ) { 
-		GHOST_PINKY_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if (GHOST_NEOS_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_NEOS_TRAILER_BODY_STATE ++;
+	} else {
+		GHOST_NEOS_TRAILER_BODY_STATE = 0;
 	}
-	if ( GHOST_INKY_TRAILER_DIRECTION === 1 ) { 
-		GHOST_INKY_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_INKY_TRAILER_DIRECTION === 3 ) { 
-		GHOST_INKY_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_SPO_TRAILER_DIRECTION === 1 ) {
+		GHOST_SPO_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_SPO_TRAILER_DIRECTION === 3 ) {
+		GHOST_SPO_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_CLYDE_TRAILER_DIRECTION === 1 ) { 
-		GHOST_CLYDE_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_CLYDE_TRAILER_DIRECTION === 3 ) { 
-		GHOST_CLYDE_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_FPO_TRAILER_DIRECTION === 1 ) {
+		GHOST_FPO_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_FPO_TRAILER_DIRECTION === 3 ) {
+		GHOST_FPO_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_BLINKY_TRAILER_POSITION_X < -255) { 
-		GHOST_BLINKY_TRAILER_DIRECTION = 1;
-		GHOST_BLINKY_TRAILER_STATE = 1;
+	if ( GHOST_OVP_TRAILER_DIRECTION === 1 ) {
+		GHOST_OVP_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_OVP_TRAILER_DIRECTION === 3 ) {
+		GHOST_OVP_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_PINKY_TRAILER_POSITION_X < -220) { 
-		GHOST_PINKY_TRAILER_DIRECTION = 1;
-		GHOST_PINKY_TRAILER_STATE = 1;
+	if ( GHOST_GREEN_TRAILER_DIRECTION === 1 ) {
+		GHOST_GREEN_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_GREEN_TRAILER_DIRECTION === 3 ) {
+		GHOST_GREEN_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_INKY_TRAILER_POSITION_X < -185) { 
-		GHOST_INKY_TRAILER_DIRECTION = 1;
-		GHOST_INKY_TRAILER_STATE = 1;
+	if ( GHOST_NEOS_TRAILER_DIRECTION === 1 ) {
+		GHOST_NEOS_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_NEOS_TRAILER_DIRECTION === 3 ) {
+		GHOST_NEOS_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_CLYDE_TRAILER_POSITION_X < -150) { 
-		GHOST_CLYDE_TRAILER_DIRECTION = 1;
-		GHOST_CLYDE_TRAILER_STATE = 1;
+	if ( GHOST_SPO_TRAILER_POSITION_X < -255) {
+		GHOST_SPO_TRAILER_DIRECTION = 1;
+		GHOST_SPO_TRAILER_STATE = 1;
 	}
-	
+	if ( GHOST_FPO_TRAILER_POSITION_X < -220) {
+		GHOST_FPO_TRAILER_DIRECTION = 1;
+		GHOST_FPO_TRAILER_STATE = 1;
+	}
+	if ( GHOST_OVP_TRAILER_POSITION_X < -185) {
+		GHOST_OVP_TRAILER_DIRECTION = 1;
+		GHOST_OVP_TRAILER_STATE = 1;
+	}
+	if ( GHOST_GREEN_TRAILER_POSITION_X < -150) {
+		GHOST_GREEN_TRAILER_DIRECTION = 1;
+		GHOST_GREEN_TRAILER_STATE = 1;
+	}
+	if ( GHOST_NEOS_TRAILER_POSITION_X < -280) {
+		GHOST_NEOS_TRAILER_DIRECTION = 1;
+		GHOST_NEOS_TRAILER_STATE = 1;
+	}
 	drawPacmanTrailer();
 	drawGhostsTrailer();
-	
-	if (HOME_TRAILER_STATE === 750) { 
+
+	if (HOME_TRAILER_STATE === 750) {
 		clearInterval(HOME_TRAILER_TIMER);
 		HOME_TRAILER_TIMER = -1;
-	} else { 
+	} else {
 		HOME_TRAILER_STATE ++;
 	}
 }
 
-function getGhostsTrailerCanevasContext() { 
+function getGhostsTrailerCanevasContext() {
 	return PACMAN_TRAILER_CANVAS_CONTEXT;
 }
-function drawGhostsTrailer() { 
+function drawGhostsTrailer() {
 	var ctx = getGhostsTrailerCanevasContext();
-	
-	if (GHOST_BLINKY_TRAILER_STATE === 1) { 
+
+	if (GHOST_SPO_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
-	} else { 
-		ctx.fillStyle = GHOST_BLINKY_COLOR;
+	} else {
+		ctx.fillStyle = GHOST_SPO_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_BLINKY_TRAILER_POSITION_X, GHOST_BLINKY_TRAILER_POSITION_Y, GHOST_BLINKY_TRAILER_DIRECTION, GHOST_BLINKY_TRAILER_BODY_STATE, GHOST_BLINKY_TRAILER_STATE, 0);
-	
-	if (GHOST_PINKY_TRAILER_STATE === 1) { 
+	drawHelperGhost(ctx, GHOST_SPO_TRAILER_POSITION_X, GHOST_SPO_TRAILER_POSITION_Y, GHOST_SPO_TRAILER_DIRECTION, GHOST_SPO_TRAILER_BODY_STATE, GHOST_SPO_TRAILER_STATE, 0);
+
+	if (GHOST_FPO_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
-	} else { 
-		ctx.fillStyle = GHOST_PINKY_COLOR;
+	} else {
+		ctx.fillStyle = GHOST_FPO_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_PINKY_TRAILER_POSITION_X, GHOST_PINKY_TRAILER_POSITION_Y, GHOST_PINKY_TRAILER_DIRECTION, GHOST_PINKY_TRAILER_BODY_STATE, GHOST_PINKY_TRAILER_STATE, 0);
-	
-	if (GHOST_INKY_TRAILER_STATE === 1) { 
+	drawHelperGhost(ctx, GHOST_FPO_TRAILER_POSITION_X, GHOST_FPO_TRAILER_POSITION_Y, GHOST_FPO_TRAILER_DIRECTION, GHOST_FPO_TRAILER_BODY_STATE, GHOST_FPO_TRAILER_STATE, 0);
+
+	if (GHOST_OVP_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
-	} else { 
-		ctx.fillStyle = GHOST_INKY_COLOR;
+	} else {
+		ctx.fillStyle = GHOST_OVP_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_INKY_TRAILER_POSITION_X, GHOST_INKY_TRAILER_POSITION_Y, GHOST_INKY_TRAILER_DIRECTION, GHOST_INKY_TRAILER_BODY_STATE, GHOST_INKY_TRAILER_STATE, 0);
-	
-	if (GHOST_CLYDE_TRAILER_STATE === 1) { 
+	drawHelperGhost(ctx, GHOST_OVP_TRAILER_POSITION_X, GHOST_OVP_TRAILER_POSITION_Y, GHOST_OVP_TRAILER_DIRECTION, GHOST_OVP_TRAILER_BODY_STATE, GHOST_OVP_TRAILER_STATE, 0);
+
+	if (GHOST_GREEN_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
-	} else { 
-		ctx.fillStyle = GHOST_CLYDE_COLOR;
+	} else {
+		ctx.fillStyle = GHOST_GREEN_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_CLYDE_TRAILER_POSITION_X, GHOST_CLYDE_TRAILER_POSITION_Y, GHOST_CLYDE_TRAILER_DIRECTION, GHOST_CLYDE_TRAILER_BODY_STATE, GHOST_CLYDE_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_GREEN_TRAILER_POSITION_X, GHOST_GREEN_TRAILER_POSITION_Y, GHOST_GREEN_TRAILER_DIRECTION, GHOST_GREEN_TRAILER_BODY_STATE, GHOST_GREEN_TRAILER_STATE, 0);
+
+	if (GHOST_NEOS_TRAILER_STATE === 1) {
+		ctx.fillStyle = GHOST_AFFRAID_COLOR;
+	} else {
+		ctx.fillStyle = GHOST_NEOS_COLOR;
+	}
+	drawHelperGhost(ctx, GHOST_NEOS_TRAILER_POSITION_X, GHOST_NEOS_TRAILER_POSITION_Y, GHOST_NEOS_TRAILER_DIRECTION, GHOST_NEOS_TRAILER_BODY_STATE, GHOST_NEOS_TRAILER_STATE, 0);
 }
-function eraseGhostsTrailer(ghost) { 
+function eraseGhostsTrailer(ghost) {
 
 	var ctx = getGhostsTrailerCanevasContext();
-	
-	ctx.clearRect(GHOST_BLINKY_TRAILER_POSITION_X - 17, GHOST_BLINKY_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_PINKY_TRAILER_POSITION_X - 17, GHOST_BLINKY_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_INKY_TRAILER_POSITION_X - 17, GHOST_BLINKY_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_CLYDE_TRAILER_POSITION_X - 17, GHOST_BLINKY_TRAILER_POSITION_Y - 17, 34, 34);
+
+	ctx.clearRect(GHOST_SPO_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_FPO_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_OVP_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_GREEN_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_NEOS_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
 }
 
-function getPacmanTrailerCanevasContext() { 
+function getPacmanTrailerCanevasContext() {
 	return PACMAN_TRAILER_CANVAS_CONTEXT;
 }
-function drawPacmanTrailer() { 
+function drawPacmanTrailer() {
 
 	var ctx = getPacmanTrailerCanevasContext();
-	
-	ctx.fillStyle = "#fff200";
+
+	ctx.fillStyle = "#f9b200";
 	ctx.beginPath();
-	
+
 	var startAngle = 0;
 	var endAngle = 2 * Math.PI;
 	var lineToX = PACMAN_TRAILER_POSITION_X;
 	var lineToY = PACMAN_TRAILER_POSITION_Y;
-	if (PACMAN_TRAILER_DIRECTION === 1) { 
+	if (PACMAN_TRAILER_DIRECTION === 1) {
 		startAngle = (0.35 - (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		endAngle = (1.65 + (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		lineToX -= 8;
-	} else if (PACMAN_TRAILER_DIRECTION === 2) { 
+	} else if (PACMAN_TRAILER_DIRECTION === 2) {
 		startAngle = (0.85 - (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		endAngle = (0.15 + (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		lineToY -= 8;
-	} else if (PACMAN_TRAILER_DIRECTION === 3) { 
+	} else if (PACMAN_TRAILER_DIRECTION === 3) {
 		startAngle = (1.35 - (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		endAngle = (0.65 + (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		lineToX += 8;
-	} else if (PACMAN_TRAILER_DIRECTION === 4) { 
+	} else if (PACMAN_TRAILER_DIRECTION === 4) {
 		startAngle = (1.85 - (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		endAngle = (1.15 + (PACMAN_TRAILER_MOUNTH_STATE * 0.05)) * Math.PI;
 		lineToY += 8;
@@ -374,7 +418,7 @@ function drawPacmanTrailer() {
 	ctx.fill();
 	ctx.closePath();
 }
-function erasePacmanTrailer() { 
+function erasePacmanTrailer() {
 
 	var ctx = getPacmanTrailerCanevasContext();
 	ctx.clearRect(PACMAN_TRAILER_POSITION_X - PACMAN_TRAILER_SIZE, PACMAN_TRAILER_POSITION_Y - PACMAN_TRAILER_SIZE, PACMAN_TRAILER_SIZE * 2, PACMAN_TRAILER_SIZE * 2);

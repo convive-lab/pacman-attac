@@ -238,7 +238,7 @@ function drawBell(ctx, x, y, size) {
 	ctx.translate(x - (size / 2), y - (size / 2));
 	
 	ctx.oval(size / 2, size / 2, size / 1, size - 5);
-	ctx.fillStyle = "#fff200";
+	ctx.fillStyle = "#f9b200";
 	ctx.fill();
 	
 	ctx.beginPath();
