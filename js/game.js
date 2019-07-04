@@ -32,8 +32,8 @@ function blinkHelp() {
 	}
 }
 
-function initGame(newgame) {
-
+function initGame() {
+	var newgame = true;
 	if (newgame) {
 		stopPresentation();
 		stopTrailer();
@@ -340,7 +340,7 @@ function score(s, type) {
 
 	if (type && (type === "green" || type === "fpo" || type === "ovp" || type === "spo" || type === "neos") ) {
 		erasePacman();
-		eraseGhost(type); 
+		eraseGhost(type);
 		$("#board").append('<span class="combo">' + SCORE_GHOST_COMBO + '</span>');
 		$("#board span.combo").css('top', eval('GHOST_' + type.toUpperCase() + '_POSITION_Y - 10') + 'px');
 		$("#board span.combo").css('left', eval('GHOST_' + type.toUpperCase() + '_POSITION_X - 10') + 'px');

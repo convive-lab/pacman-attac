@@ -110,13 +110,13 @@
 					KEYDOWN = false;
 				});
 
-				$("#start").click(function(e) {
-					initGame(true);
-				});
+				// $("#start").click(function(e) {
+				// 	initGame(true);
+				// });
 				$("body").keydown(function(e) {
 
 					if (HOME) {
-						console.log("blub");
+						console.log(e);
 						// initGame(true);
 
 					} else {
@@ -205,7 +205,7 @@
 					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">"Gamon"</div>
 				</div>
 				<canvas id="trailer"></canvas>
-				<button id="start">start</button>
+				<button id="start" onclick="initGame()">start</button>
 
 
 			</div>
