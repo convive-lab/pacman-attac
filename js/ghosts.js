@@ -68,7 +68,7 @@ var GHOST_NEOS_AFFRAID_TIMER = null;
 var GHOST_NEOS_AFFRAID_STATE = 0;
 var GHOST_NEOS_TUNNEL = false;
 
-var GHOST_AFFRAID_COLOR = "#2d3eff";
+var GHOST_AFFRAID_COLOR = "#2d3eff21";
 var GHOST_AFFRAID_FINISH_COLOR = "#fff";
 var GHOST_POSITION_STEP = 2;
 var GHOST_MOVING_SPEED = 30;
@@ -175,7 +175,7 @@ function drawGhost(ghost) {
 		if (eval('GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE === 1')) {
 			eval('ctx.fillStyle = GHOST_AFFRAID_FINISH_COLOR');
 		} else {
-			eval('ctx.fillStyle = GHOST_AFFRAID_COLOR');
+			eval('ctx.fillStyle = GHOST_' + ghost.toUpperCase() + '_COLOR');
 		}
 	}
 	eval('drawHelperGhost(ctx, GHOST_' + ghost.toUpperCase() + '_POSITION_X, GHOST_' + ghost.toUpperCase() + '_POSITION_Y, GHOST_' + ghost.toUpperCase() + '_DIRECTION, GHOST_' + ghost.toUpperCase() + '_BODY_STATE, GHOST_' + ghost.toUpperCase() + '_STATE, GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE)');
@@ -257,11 +257,40 @@ function startEatGhost(ghost) {
 
 		pauseGhosts();
 		pausePacman();
-
-		setTimeout('eatGhost(\''+ ghost + '\')', 600);
+		eatGhostPopup(ghost);
 	}
 }
+eatenghost =""
+function eatGhostPopup(ghost){
+	$('#ghost-popup-twit').empty();
 
+	$("#ghost-popup").css('display', 'flex');
+	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
+	$("#ghost-name").html(ghost);
+	$("#ghost-name").css("color",eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
+	eatenghost = ghost;
+	if(typeof twttr.widgets !="undefined"){
+		twttr.widgets.createShareButton(
+			'/',
+			document.getElementById('ghost-popup-twit'),
+			{
+				text: 'Hello '+ghost
+			}
+		);
+	}
+	var that = this;
+	that.ghost = ghost
+		$("#continue").click(function(){
+			$("#ghost-popup").css('display', 'none');
+			setTimeout('eatGhost(\''+ ghost + '\')', 600);
+
+		})
+	// setTimeout('eatGhost(\''+ ghost + '\')', 600);
+
+}
+// eatGhostPopupClose = function(){
+// 	setTimeout('eatGhost(\''+ eatenghost + '\')', 600);
+// }
 function eatGhost(ghost) {
 
 	playGhostEatenSound();
@@ -682,7 +711,7 @@ function drawHelperGhost(ctx, x, y, d, b, s, a) {
 	} else if (d === 3) {
 		eyesX = -3;
 	}
-
+	//eyes normal
 	if (s === 0 || s === -1) {
 		ctx.fillStyle = "white";
 		ctx.beginPath();
@@ -720,10 +749,11 @@ function drawHelperGhost(ctx, x, y, d, b, s, a) {
 		ctx.arc((x - 15) + 6 + eyesX, (y + 16) - 18 + eyesY, 2, 0, Math.PI * 2, true);
 		ctx.fill();
 	} else {
+		//eyes afraid
 		if (a === 1) {
 			ctx.fillStyle = "#ee2933";
 		} else {
-			ctx.fillStyle = "#e5bed0";
+			ctx.fillStyle = "#FFF";
 		}
 		ctx.beginPath();
 		ctx.arc((x - 15) + 18, (y + 13) - 17, 2, 0, Math.PI * 2, true);
@@ -736,7 +766,7 @@ function drawHelperGhost(ctx, x, y, d, b, s, a) {
 		if (a === 1) {
 			ctx.strokeStyle = "#ee2933";
 		} else {
-			ctx.strokeStyle = "#e5bed0";
+			ctx.strokeStyle = "#FFF";
 		}
 		ctx.beginPath();
 		ctx.lineTo((x - 14.333) + 24, (y + 6));

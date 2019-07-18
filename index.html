@@ -26,32 +26,23 @@
 		<script type="text/javascript" src="js/home.js"></script>
 		<script type="text/javascript" src="js/sound.js"></script>
 <!-- twitter -->
-		<script>window.twttr = (function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0],
-		    t = window.twttr || {};
-		  if (d.getElementById(id)) return t;
-		  js = d.createElement(s);
-		  js.id = id;
-		  js.src = "https://platform.twitter.com/widgets.js";
-		  fjs.parentNode.insertBefore(js, fjs);
+		<script>
+		window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
 
-		  t._e = [];
-		  t.ready = function(f) {
-		    t._e.push(f);
-		  };
+			t._e = [];
+			t.ready = function(f) {
+				t._e.push(f);
+			};
 
-		  return t;
+			return t;
 		}(document, "script", "twitter-wjs"));
-		setTimeout(function () {
-			twttr.widgets.createShareButton(
-				'/',
-				document.getElementById('test'),
-				{
-					text: 'Hello World'
-				}
-				);
-		}, 1000);
-
 		</script>
 		<script type="text/javascript">
 
@@ -67,6 +58,8 @@
 			}
 
 			$(document).ready(function() {
+
+
 				//$.mobile.loading().hide();
 
 				loadAllSound();
@@ -237,8 +230,6 @@
 					<h2>E-Mail/Twitter</h2>
 					<input class="input-user" type="text"></input>
 				</div>
-				<div id="twitter-wjs"></div>
-				<div id="test"></div>
 				<button id="start" onclick="initGame()">start</button>
 
 
@@ -285,7 +276,18 @@
 				<a class="sound" href="javascript:void(0);" data-sound="on"><img src="img/sound-on.png" alt="" border="0"></a>
 			</div>
 		</div>
-
+		<div id="ghost-popup">
+			<div class="ghost-popup-container">
+				<div id="ghost-name"></div>
+					Alle Wiener Kinder und Jugendlichen, aber auch deren Eltern, Lehrer_innen oder Elementarpädagog_innen können sich bei Problemen in der Schule oder im Kindergarten an die Bildungsombudsstelle wenden.
+				<div class="popup-actions">
+					<div id="ghost-popup-twit"></div>
+					<button id="email" class="btn">E-Mail senden</button>
+					<button id="continue" class="btn">Weiter spielen</button>
+				</div>
+			</div>
+		</div>
+		<div id="twitter-wjs" data-size="large"></div>
 	</body>
 
 </html>
