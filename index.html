@@ -131,6 +131,7 @@
 					KEYDOWN = false;
 				});
 
+
 				// $("#start").click(function(e) {
 				// 	initGame(true);
 				// });
@@ -183,6 +184,9 @@
 						//}
 					}
 				});
+				$('#start').click(function(){
+					initGame();
+				})
 			});
 		</script>
 
@@ -230,7 +234,7 @@
 					<h2>E-Mail/Twitter</h2>
 					<input class="input-user" type="text"></input>
 				</div>
-				<button id="start" onclick="initGame()">start</button>
+				<button id="start">start</button>
 
 
 			</div>
