@@ -136,7 +136,42 @@ position: relative;
 	width: 500px;
 	height: 50px;
 }
-
+.input-user{
+	background-color: black;
+	width: 100%;
+}
+.theme-box{
+	width:200px;
+	height: 50px;
+	border:5px solid #FFF;
+	position: absolute;
+	color: #FFF;
+}
+#box-1 {
+    left: -220px;
+    top: 48px;
+		border-color: #ed1b24;
+}
+#box-2 {
+    right: -220px;
+    top: 48px;
+		border-color: #005ca7
+}
+#box-3 {
+    left: -220px;
+    top: 389px;
+		border-color:#61c2d0;
+}
+#box-4 {
+    right: -220px;
+    top: 389px;
+		border-color:#67af27;
+}
+#box-5 {
+	right: 174px;
+	top: 583px;
+	border-color:#eb4188;
+}
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) {
 
 }

@@ -153,7 +153,7 @@ function eraseBubble(t, x, y) {
 }
 
 function isSuperBubble(line, bubble) {
-	if ( (line === 23 || line === 4) && (bubble === 1 || bubble === 26)) {
+	if ( (line === 23 || line === 4) && (bubble === 1 || bubble === 26) || line === 29 && bubble===12) {
 		return true;
 	}
 

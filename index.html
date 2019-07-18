@@ -25,7 +25,34 @@
 		<script type="text/javascript" src="js/ghosts.js"></script>
 		<script type="text/javascript" src="js/home.js"></script>
 		<script type="text/javascript" src="js/sound.js"></script>
+<!-- twitter -->
+		<script>window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+		    t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
 
+		  t._e = [];
+		  t.ready = function(f) {
+		    t._e.push(f);
+		  };
+
+		  return t;
+		}(document, "script", "twitter-wjs"));
+		setTimeout(function () {
+			twttr.widgets.createShareButton(
+				'/',
+				document.getElementById('test'),
+				{
+					text: 'Hello World'
+				}
+				);
+		}, 1000);
+
+		</script>
 		<script type="text/javascript">
 
 			function simulateKeyup(code) {
@@ -41,6 +68,7 @@
 
 			$(document).ready(function() {
 				//$.mobile.loading().hide();
+
 				loadAllSound();
 
 				HELP_TIMER = setInterval('blinkHelp()', HELP_DELAY);
@@ -205,6 +233,12 @@
 					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">"Gamon"</div>
 				</div>
 				<canvas id="trailer"></canvas>
+				<div class="input-id">
+					<h2>E-Mail/Twitter</h2>
+					<input class="input-user" type="text"></input>
+				</div>
+				<div id="twitter-wjs"></div>
+				<div id="test"></div>
 				<button id="start" onclick="initGame()">start</button>
 
 
@@ -230,6 +264,11 @@
 					<div id="control-down-big"></div>
 					<div id="control-left-big"></div>
 					<div id="control-right-big"></div>
+					<div class="theme-box" id="box-1">Themenfeld 1</div>
+					<div class="theme-box" id="box-2">Themenfeld 2</div>
+					<div class="theme-box" id="box-3">Themenfeld 3</div>
+					<div class="theme-box" id="box-4">Themenfeld 4</div>
+					<div class="theme-box" id="box-5">Themenfeld 5</div>
 				</div>
 				<div id="control">
 					<div id="control-up"></div>
