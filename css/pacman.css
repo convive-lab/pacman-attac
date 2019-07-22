@@ -15,7 +15,13 @@
 	font-family: 'Quadrit';
 	src: url('../css/Quadrit.ttf');
 }
-
+@font-face {
+    font-family: 'vcr';
+    src: url('vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+         url('vcr_osd_mono_1.001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
 	font-family: Quadrit, sans-serif;
 	font-size: 20px;
@@ -418,6 +424,7 @@ h3 {
 	    border: 4px solid;
 			animation: createPopup .75s;
 			position: relative;
+			font-family: "vcr";
 }
 .engage-popup-container,
 #activist-guide{
