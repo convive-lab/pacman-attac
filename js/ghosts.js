@@ -255,14 +255,15 @@ function startEatGhost(ghost) {
 
 		score(SCORE_GHOST_COMBO, ghost);
 
+		eatGhost(ghost);
 		pauseGhosts();
 		pausePacman();
+		pauseGame();
 		eatGhostPopup(ghost);
 	}
 }
 eatenghost =""
 function eatGhostPopup(ghost){
-	pauseGame();
 	$('#ghost-popup-twit').empty();
 
 	$("#ghost-popup").css('display', 'flex');
@@ -284,7 +285,7 @@ function eatGhostPopup(ghost){
 		$("#continue").click(function(){
 			$("#ghost-popup").css('display', 'none');
 			resumeGame();
-			setTimeout('eatGhost(\''+ ghost + '\')', 300);
+
 
 		})
 	// setTimeout('eatGhost(\''+ ghost + '\')', 600);
