@@ -459,7 +459,7 @@ h3 {
 }
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) {
 	#panel, .game #home {
-		zoom: 135%;
+		/* zoom: 135%; */
 	}
 }
 
@@ -468,7 +468,7 @@ h3 {
 		display: none;
 	}
 	#panel, .game #home {
-		zoom: 105%;
+		/* zoom: 105%; */
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
@@ -543,7 +543,7 @@ h3 {
 }
 @media screen and (max-height:640px), screen and (min-device-height : 480px) and (max-device-height : 640px) and (-webkit-device-pixel-ratio: 3) {
 	#panel, .game #home {
-		zoom: 60%;
+		/* zoom: 60%; */
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
@@ -557,7 +557,7 @@ h3 {
 }
 @media screen and (max-height:480px), screen and (min-device-height : 320px) and (max-device-height : 480px) {
 	#panel, .game #home {
-		zoom: 55%;
+		/* zoom: 55%; */
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
