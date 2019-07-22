@@ -262,6 +262,7 @@ function startEatGhost(ghost) {
 }
 eatenghost =""
 function eatGhostPopup(ghost){
+	pauseGame();
 	$('#ghost-popup-twit').empty();
 
 	$("#ghost-popup").css('display', 'flex');
@@ -282,7 +283,8 @@ function eatGhostPopup(ghost){
 	that.ghost = ghost
 		$("#continue").click(function(){
 			$("#ghost-popup").css('display', 'none');
-			setTimeout('eatGhost(\''+ ghost + '\')', 600);
+			resumeGame();
+			setTimeout('eatGhost(\''+ ghost + '\')', 300);
 
 		})
 	// setTimeout('eatGhost(\''+ ghost + '\')', 600);

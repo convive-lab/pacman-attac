@@ -49,10 +49,32 @@ body {
 	display: flex;
 	width: 100%;
 }
+.scores{
+	position: relative;
+	width: 100%;
+}
+#panel .header{
+	display: flex;
+	flex-direction: row;
+	height: 120px;
+	justify-content: center;
+	max-width: 100vw;
+}
+#panel .header .logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+		height: 30px;
+		width: 110px;
+}
+#panel .header .logo #logo {
+	width: 70px;
+}
 #score, #highscore  {
 	position: absolute;
 	display: inline;
-	top: 70px;
+	top: -50px;
 	margin: 0px;
 	padding: 0px;
 	width: 160px;
@@ -81,9 +103,11 @@ body {
 #message {
 	position: absolute;
 	display: inline;
-	top: 413px;
-	left: 180px;
-	margin: 0px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	padding: 0px;
 	width: 210px;
 	height: 30px;
@@ -105,11 +129,11 @@ span.combo, span.fruits {
 	color: #89dfff;
 	font-weight: normal;
 }
-#home{
+.game #home{
 	display: flex;
 	flex-direction: column;
 }
-#panel, #home {
+#panel, .game #home {
 	width: 550px;
 	height: 690px;
 	margin: auto;
@@ -149,16 +173,17 @@ span.combo, span.fruits {
 }
 
 #control {
-	position: absolute;
+	position: fixed;
 	margin: auto;
 	left: 0px;
 	right: 0px;
-	bottom: -145px;
-	width: 550px;
+	bottom: 0px;
+	width: 100%;
 	height: 140px;
 	background-color: #666;
 	opacity: 0.7;
 	display: none;
+	z-index: 5000;
 }
 #control-up, #control-down, #control-up-second, #control-down-second, #control-left, #control-right, #control-up-big, #control-down-big, #control-left-big, #control-right-big {
 	position: absolute;
@@ -167,18 +192,31 @@ span.combo, span.fruits {
 	background-position: 50% 50%;
 	background-size: 64px;
 	cursor: pointer;
-	width: 64px;
-	height: 64px;
+	width: 60px;
+	height: 56px;
 	padding: 5px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: 0;
+	border: none;
+	background-color: transparent;
+	background-size: contain;
+	padding: 0px;
 }
 #control-up {
 	top: 0px;
-	left: 70px;
+	left: 0px;
+	right: 0px;
 	background-image: url('../img/move-up.png');
 }
 #control-down {
 	bottom: 0px;
-	right: 70px;
+	left: 0px;
+	right: 0px;
 	background-image: url('../img/move-down.png');
 }
 #control-up-second {
@@ -194,13 +232,13 @@ span.combo, span.fruits {
 #control-left {
 	bottom: 0px;
 	top: 0px;
-	left: 0px;
+	left: 20%;
 	background-image: url('../img/move-left.png');
 }
 #control-right {
 	bottom: 0px;
 	top: 0px;
-	right: 0px;
+	right: 20%;
 	background-image: url('../img/move-right.png');
 }
 
@@ -271,7 +309,7 @@ h3 {
 .sound img {
 	height: 28px;
 }
-#home .sound {
+.game #home .sound {
 	bottom: 0px;
 	right: 5px;
 }
@@ -356,7 +394,7 @@ h3 {
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-
+#engage-popup,
 #ghost-popup {
     position: absolute;
     width: 100%;
@@ -365,14 +403,28 @@ h3 {
 		justify-content: center;
 		align-items: center;
 		top: 0px;
+		z-index: 5001;
 }
+#engage-popup{
+	display: flex;
+}
+.engage-popup-container,
 .ghost-popup-container {
 	    width: 400px;
+			max-width: 90%;
 	    margin: auto;
 	    background-color: black;
 	    padding: 30px;
 	    border: 4px solid;
 			animation: createPopup .75s;
+			position: relative;
+}
+.engage-popup-container,
+#activist-guide{
+	border-color: #f9b200;
+}
+#gameover-title,#activist-guide{
+	color: #f9b200;
 }
 @keyframes createPopup {
   from {
@@ -385,39 +437,111 @@ h3 {
 .ghost-popup-container #ghost-name{
 	font-size: 1.3rem;
 }
+.engage-popup-container .btn,
 .ghost-popup-container .btn{
 	background-color: black;
+}
+.engage-popup-container #engage-break,
+.ghost-popup-container #continue {
+    position: absolute;
+    right: 20px;
 }
 .popup-actions{
 	display: flex;
 
 }
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) {
-	#panel, #home {
+	#panel, .game #home {
 		zoom: 135%;
 	}
 }
 
 @media screen and (max-width:1024px), screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-	#home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	.game #home .help-button, #panel .help-button, .game #home .github, #sound, .sound {
 		display: none;
 	}
-	#panel, #home {
+	#panel, .game #home {
 		zoom: 105%;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		outline: 0;
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
+	#panel .header{
+		display: flex;
+		flex-direction: row;
+		height: 60px;
+	}
+	#panel .header .logo {
+	  	display: flex;
+	  	justify-content: center;
+	  	align-items: center;
+			padding: 0px;
+			height: 30px;
+			width: 110px;
+	}
+	#panel .header .logo #logo {
+		width: 70px;
+	}
+
+	#score, #highscore {
+		display: flex;
+		width: auto;
+		top: -25px;
+	}
+	#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-green,
+	#canvas-ghost-neos {
+		width: 95vw;
+		height: 95vw;
+		position: absolute;
+	}
+	#control{
+		display: flex;
+
+	}
+	.ghost-popup-container{
+		font-size: 15px;
+	}
+	.ghost-popup-container .btn{
+		font-size: 12px;
+	}
+	.theme-box{
+		display: none;
+	}
+	#board{
+		position: relative!important;
+	}
+	#canvas-lifes, #canvas-level-fruits{
+		position: relative;
+		top: 0px;
+		z-index: 1;
+	}
+	#canvas-lifes{
+		left: 10px;
+	}
+	#highscore{
+		left: 140px;
+	}
+	#panel{
+		max-height: 90%;
+		overflow-y: hidden;
+	}
 
 }
 @media screen and (max-height:640px), screen and (min-device-height : 480px) and (max-device-height : 640px) and (-webkit-device-pixel-ratio: 3) {
-	#panel, #home {
+	#panel, .game #home {
 		zoom: 60%;
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
-	#home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	.game #home .help-button, #panel .help-button, .game #home .github, #sound, .sound {
 		display: none;
 	}
 	h1, #canvas-panel-title-pacman {
@@ -425,13 +549,13 @@ h3 {
 	}
 }
 @media screen and (max-height:480px), screen and (min-device-height : 320px) and (max-device-height : 480px) {
-	#panel, #home {
+	#panel, .game #home {
 		zoom: 55%;
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
-	h1, #canvas-panel-title-pacman, #control-up-second, #control-down-second, #home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	h1, #canvas-panel-title-pacman, #control-up-second, #control-down-second, .game #home .help-button, #panel .help-button, .game #home .github, #sound, .sound {
 		display: none;
 	}
 	#score, #highscore {

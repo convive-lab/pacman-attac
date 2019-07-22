@@ -99,16 +99,18 @@
 					}
 				});
 
-				$("#home").on("click touchstart", function(e) {
-					if ( $('#help').css("display") === "none") {
-						e.preventDefault();
-						simulateKeydown(13);
-					}
-				});
-				$("#control-up, #control-up-second, #control-up-big").on("mousedown touchstart", function(e) {
-					e.preventDefault();
-					simulateKeydown(38);
-					simulateKeyup(13);
+				// $("#home").on("click touchstart", function(e) {
+				// 	if ( $('#help').css("display") === "none") {
+				// 		e.preventDefault();
+				// 		simulateKeydown(13);
+				// 		alert("shit");
+				// 	}
+				// });
+				$("#control-up").click(function(e) {
+					console.log("down");
+					movePacman(4);
+					// simulateKeydown(38);
+					// simulateKeyup(13);
 				});
 				$("#control-down, #control-down-second, #control-down-big").on("mousedown touchstart", function(e) {
 					e.preventDefault();
@@ -125,6 +127,10 @@
 					simulateKeydown(39);
 					simulateKeyup(13);
 				});
+				$("#engage-break").on("mousedown touchstart", function(e) {
+					initHome();
+				})
+
 
 
 				$("body").keyup(function(e) {
@@ -135,6 +141,7 @@
 				// $("#start").click(function(e) {
 				// 	initGame(true);
 				// });
+				$('#start').on({ 'touchstart' : function(){ initGame();} });
 				$("body").keydown(function(e) {
 
 					if (HOME) {
@@ -195,39 +202,42 @@
 
 	<body>
 
-		<div id="sound"></div>
+		<div class="game" id="game">
 
-		<div id="help">
-			<h2>Help</h2>
-			<table align="center" border="0" cellPadding="2" cellSpacing="0">
-				<tbody>
-					<tr><td>Arrow Left : </td><td>Move Left</td></tr>
-					<tr><td>Arrow Right : </td><td>Move Right</td></tr>
-					<tr><td>Arrow Down : </td><td>Move Down</td></tr>
-					<tr><td>Arrow Up : </td><td>Move Up</td></tr>
-					<tr><td colspan="2">&nbsp;</td></tr>
-					<tr><td>P : </td><td>PAUSE</td></tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="logo">
-			<img id="logo" src="img/attac.png"/>
-		</div>
-		<div class="game">
+					<div id="sound"></div>
+
+					<div id="help">
+						<h2>Help</h2>
+						<table align="center" border="0" cellPadding="2" cellSpacing="0">
+							<tbody>
+								<tr><td>Arrow Left : </td><td>Move Left</td></tr>
+								<tr><td>Arrow Right : </td><td>Move Right</td></tr>
+								<tr><td>Arrow Down : </td><td>Move Down</td></tr>
+								<tr><td>Arrow Up : </td><td>Move Up</td></tr>
+								<tr><td colspan="2">&nbsp;</td></tr>
+								<tr><td>P : </td><td>PAUSE</td></tr>
+							</tbody>
+						</table>
+					</div>
 
 			<div id="home">
-				<h1>pac <canvas id="canvas-home-title-pacman"></canvas> man</h1>
+				<div class="header">
+					<div class="logo">
+						<img id="logo" src="img/attac.png"/>
+					</div>
+					<h1>pac <canvas id="canvas-home-title-pacman"></canvas> man</h1>
+				</div>
 				<div class="footer">
 					<div class="help-button">- help -</div>
 					<a class="sound" href="javascript:void(0);" data-sound="on"><img src="img/sound-on.png" alt="" border="0"></a>
 				</div>
 				<div id="presentation">
 					<div id="presentation-titles">character &nbsp;/&nbsp; nickname</div>
-					<canvas id="canvas-presentation-ovp"></canvas><div id="presentation-character-ovp">- OVP</div><div id="presentation-name-ovp">"Kurz"</div>
-					<canvas id="canvas-presentation-fpo"></canvas><div id="presentation-character-fpo">- FPO</div><div id="presentation-name-fpo">"Hofer"</div>
-					<canvas id="canvas-presentation-spo"></canvas><div id="presentation-character-spo">- SPO</div><div id="presentation-name-spo">"Rendi-Wagner"</div>
-					<canvas id="canvas-presentation-green"></canvas><div id="presentation-character-green">- GRUNE</div><div id="presentation-name-green">"Kogler"</div>
-					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">"Gamon"</div>
+					<canvas id="canvas-presentation-ovp"></canvas><div id="presentation-character-ovp">- OVP</div><div id="presentation-name-ovp">Kurz</div>
+					<canvas id="canvas-presentation-fpo"></canvas><div id="presentation-character-fpo">- FPO</div><div id="presentation-name-fpo">Hofer</div>
+					<canvas id="canvas-presentation-spo"></canvas><div id="presentation-character-spo">- SPO</div><div id="presentation-name-spo">Rendi-Wagner</div>
+					<canvas id="canvas-presentation-green"></canvas><div id="presentation-character-green">- GRUNE</div><div id="presentation-name-green">Kogler</div>
+					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">Meinl-Reisinger</div>
 				</div>
 				<canvas id="trailer"></canvas>
 				<div class="input-id">
@@ -240,10 +250,16 @@
 			</div>
 
 			<div id="panel">
-				<h1>pac <canvas id="canvas-panel-title-pacman"></canvas>man</h1>
-
-				<div id="score"><h2>1UP</h2><span>00</span></div>
-				<div id="highscore"><h2>High Score</h2><span>00</span></div>
+				<div class="header">
+					<div class="logo">
+						<img id="logo" src="img/attac.png"/>
+					</div>
+					<h1>pac <canvas id="canvas-panel-title-pacman"></canvas>man</h1>
+				</div>
+				<div class="scores">
+					<div id="score"><h2>1UP</h2><span>00</span></div>
+					<div id="highscore"><h2>High Score</h2><span>00</span></div>
+				</div>
 				<div id="board">
 					<canvas id="canvas-board"></canvas>
 					<canvas id="canvas-paths"></canvas>
@@ -255,39 +271,45 @@
 					<canvas id="canvas-ghost-ovp"></canvas>
 					<canvas id="canvas-ghost-green"></canvas>
 					<canvas id="canvas-ghost-neos"></canvas>
-					<div id="control-up-big"></div>
-					<div id="control-down-big"></div>
-					<div id="control-left-big"></div>
-					<div id="control-right-big"></div>
 					<div class="theme-box" id="box-1">Themenfeld 1</div>
 					<div class="theme-box" id="box-2">Themenfeld 2</div>
 					<div class="theme-box" id="box-3">Themenfeld 3</div>
 					<div class="theme-box" id="box-4">Themenfeld 4</div>
 					<div class="theme-box" id="box-5">Themenfeld 5</div>
+					<div id="message"></div>
 				</div>
 				<div id="control">
-					<div id="control-up"></div>
-					<div id="control-up-second"></div>
-					<div id="control-down"></div>
-					<div id="control-down-second"></div>
-					<div id="control-left"></div>
-					<div id="control-right"></div>
+					<button id="control-up"></button>
+					<button id="control-down"></button>
+					<button id="control-left"></button>
+					<button id="control-right"></button>
 				</div>
 				<canvas id="canvas-lifes"></canvas>
 				<canvas id="canvas-level-fruits"></canvas>
-				<div id="message"></div>
 				<div class="help-button">- help -</div>
 				<a class="sound" href="javascript:void(0);" data-sound="on"><img src="img/sound-on.png" alt="" border="0"></a>
 			</div>
 		</div>
 		<div id="ghost-popup">
 			<div class="ghost-popup-container">
+				<button id="continue" class="btn">X</button>
 				<div id="ghost-name"></div>
 					Alle Wiener Kinder und Jugendlichen, aber auch deren Eltern, Lehrer_innen oder Elementarpädagog_innen können sich bei Problemen in der Schule oder im Kindergarten an die Bildungsombudsstelle wenden.
 				<div class="popup-actions">
 					<div id="ghost-popup-twit"></div>
 					<button id="email" class="btn">E-Mail senden</button>
-					<button id="continue" class="btn">Weiter spielen</button>
+				</div>
+			</div>
+		</div>
+		<div id="engage-popup">
+			<div class="engage-popup-container">
+				<button id="engage-break" class="btn">X</button>
+				<div id="gameover-title">GAMEOVER</div>
+				<p>Aber es ist noch nicht zu Ende, hier sind deine Gewinne:</p>
+				<button id="activist-guide" class="btn">Aktivist Guide</button><br/>
+				<div class="popup-actions">
+					<button id="email" class="btn">Newsletter Eintragen</button>
+					<button id="email" class="btn">An Attac Spenden</button>
 				</div>
 			</div>
 		</div>

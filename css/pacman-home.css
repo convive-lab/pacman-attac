@@ -1,13 +1,13 @@
-#home{
+.game #home{
 	display: flex;
 }
-#home h1 {
+.game #home h1 {
 	text-align: center;
 	font-size: 78px;
 	color: #FFF;
 	margin: 0px;
 }
-#home h3 {
+.game #home h3 {
 	position: absolute;
 	margin: auto;
 	left: 0px;
@@ -15,12 +15,12 @@
 	bottom: 15px;
 	text-align: center;
 }
-#home h3 em {
+.game #home h3 em {
 	font-size: inherit;
 	font-style: inherit;
 	color: #f9b200;
 }
-#home #start{
+.game #home #start{
 	color: #f9b200;
 	padding: 30px;
 	width: 150px;
@@ -48,6 +48,8 @@ position: relative;
 	padding: 0px;
 	width: 500px;
 	height: 250px;
+	max-width: 100%;
+	margin-bottom: 280px;
 }
 #presentation-titles {
 	position: absolute;
@@ -177,11 +179,96 @@ position: relative;
 }
 
 @media screen and (max-width:1024px), screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-
+	#logo {
+		max-width: 100px
+	}
+	.logo{
+		padding: 15px;
+		margin: 0px;
+	}
+	.game #home {
+		max-width:100%;
+		margin: 0px;
+	}
+	.game #home h1 {
+		font-size: 35px;
+	}
+	#presentation-titles {
+		font-size: 15px;
+		left: 52px;
+	}
+	#canvas-home-title-pacman {
+    height: 40px;
+    width: 45px;
+	}
 	#canvas-panel-title-pacman {
 		left: 49px;
 		width: 42px;
+	}
+	#presentation{
+		margin: 0px;
+	}
+	#canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp, #canvas-presentation-green, #canvas-presentation-neos {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 15px;
+	}
+	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-green, #presentation-character-neos,
+	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-green, #presentation-name-neos {
+		font-size: 15px;
+	}
+	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-green, #presentation-character-neos
+	{
+		left: 60px;
+	}
+	#presentation-character-ovp, #presentation-name-ovp {
+		top: 45px;
+		color: #61c2d0;
+	}
+	#presentation-character-fpo, #presentation-name-fpo {
+		top: 100px;
+		color: #005ca7;
+	}
+	#presentation-character-spo, #presentation-name-spo {
+		top: 150px;
+		color: #ed1b24;
+	}
+	#presentation-character-green, #presentation-name-green {
+		top: 200px;
+		color: #67af27;
+	}
+	#presentation-character-neos, #presentation-name-neos {
+		top: 250px;
+		color: #eb4188;
+	}
+	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-green, #presentation-name-neos {
+		left: 159px;
+		width: 203px;
+	}
+	.input-user {
+		font-size: 15px;
+    max-width: 93%;
+	}
+	.input-id h2{
+		font-size: 15px;
+		margin: 0px;
+	}
+	#trailer {
+    padding: 0px;
+    width: 90vw;
+    height: 50px;
+    margin: 10px;
+	}
+	body {
+    width: 100vw;
+    overflow-x: hidden;
+	}
+	.game #home #start {
+    color: #f9b200;
+    padding: 10px;
+    width: 150px;
+    margin: 10px auto;
 	}
 }
 

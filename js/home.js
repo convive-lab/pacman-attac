@@ -60,7 +60,8 @@ function initHome() {
 	GAMEOVER = false;
 	LOCK = false;
 	PACMAN_DEAD = false;
-
+	$("#engage-popup").hide();
+	$("#game").removeClass("started");
 
 	$("#panel").hide();
 	$("#home").show();

@@ -42,7 +42,7 @@ function initGame() {
 		GAMEOVER = false;
 
 		$('#help').fadeOut("slow");
-
+		$("#game").addClass("started");
 		score(0);
 		clearMessage();
 		$("#home").hide();
@@ -284,6 +284,8 @@ function lifes(l) {
 
 function gameover() {
 	GAMEOVER = true;
+	$("#engage-popup").css('display',"flex");
+
 	message("game over");
 	stopTimes();
 
