@@ -255,16 +255,16 @@ function startEatGhost(ghost) {
 
 		score(SCORE_GHOST_COMBO, ghost);
 
-		eatGhost(ghost);
 		pauseGhosts();
 		pausePacman();
-		pauseGame();
-		eatGhostPopup(ghost);
+		setTimeout('eatGhost(\''+ ghost + '\')', 600);
 	}
 }
 eatenghost =""
 function eatGhostPopup(ghost){
 	$('#ghost-popup-twit').empty();
+	pauseGame();
+
 
 	$("#ghost-popup").css('display', 'flex');
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
@@ -286,7 +286,6 @@ function eatGhostPopup(ghost){
 			$("#ghost-popup").css('display', 'none');
 			resumeGame();
 
-
 		})
 	// setTimeout('eatGhost(\''+ ghost + '\')', 600);
 
@@ -307,6 +306,8 @@ function eatGhost(ghost) {
 	resumeGhosts();
 	resumePacman();
 	LOCK = false;
+	eatGhostPopup(ghost);
+
 }
 function cancelEatGhost(ghost) {
 	if (eval('GHOST_' + ghost.toUpperCase() + '_STATE === -1')) {
