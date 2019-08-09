@@ -81,7 +81,7 @@ function initGame() {
 	}
 
 	initBoard();
-	drawBoard();
+	drawBoard(-1);
 	drawBoardDoor();
 
 	initPaths();

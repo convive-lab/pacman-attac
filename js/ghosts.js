@@ -236,6 +236,8 @@ function testStateGhosts() {
 	) {
 		playGhostEatenSound();
 	} else {
+		drawBoard(-1);
+		$("body").removeClass();
 		playSirenSound();
 	}
 }
@@ -286,7 +288,6 @@ function eatGhostPopup(ghost){
 								+"&body="+texts[ghost.toUpperCase()].email_introduction+texts.themen[themenFeld].email_text;
 	$("#ghost-email").attr("href", newMail);
 	function gaevent() {
-		console.log(ghost);
 		gtag('event', ghost, {
 		'event_category': "send mail",
 		'event_label': ghost,

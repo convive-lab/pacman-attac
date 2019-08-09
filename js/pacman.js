@@ -328,6 +328,9 @@ function testBubblesPacman() {
 				if ( type === "s" ) {
 					var sBubble = bubbleParams[1]+";"+bubbleParams[2]+";"+bubbleParams[0]+";0";
 					window.themenFeld=SUPER_BUBBLES.indexOf(sBubble)
+					$("body").addClass("theme"+window.themenFeld)
+					drawBoard(window.themenFeld)
+					// $("body").addClass("theme"+window.themenFeld)
 					setSuperBubbleOnXY( testX, testY, "1" );
 					score( SCORE_SUPER_BUBBLE );
 					playEatPillSound();

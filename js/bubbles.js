@@ -38,6 +38,7 @@ function drawBubbles() {
 
 	for (var line = 1, linemax = 29, i = 0, s = 0; line <= linemax; line ++) {
 		var y = getYFromLine(line);
+		ctx.fillStyle = "#FFF";
 		for (var x = BUBBLES_X_START, xmax = BUBBLES_X_END, bubble = 1 ; x < xmax; bubble ++, x += BUBBLES_GAP) {
 			if (canAddBubble(line, bubble)) {
 				var type = "";
@@ -46,6 +47,8 @@ function drawBubbles() {
 					type = "s";
 					size = SUPER_BUBBLES_SIZE;
 					SUPER_BUBBLES[s] = line + ";" + bubble + ";" + parseInt(correctionX(x, bubble)) + "," + parseInt(y) + ";0";
+					if(s==0)
+					ctx.fillStyle = "#FFF";
 					s ++;
 				} else {
 					type = "b";
@@ -98,7 +101,12 @@ function blinkSuperBubbles() {
 					eraseBubble("s", sx, sy);
 				} else {
 					var ctx = getBubblesCanevasContext();
-					ctx.fillStyle = "#dca5be";
+					if(i==0)ctx.fillStyle="#ed1b24";
+					if(i==1)ctx.fillStyle="#005ca7";
+					if(i==2)ctx.fillStyle="#61c2d0";
+					if(i==3)ctx.fillStyle="#67af27";
+					if(i==4)ctx.fillStyle="#eb4188";
+					// if(i==0)ctx.fillStyle = "#dca5be";
 					ctx.beginPath();
 					ctx.arc(sx, sy, SUPER_BUBBLES_SIZE, 0, 2 * Math.PI, false);
 					ctx.fill();
