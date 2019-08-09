@@ -424,3 +424,26 @@ function erasePacmanTrailer() {
 	var ctx = getPacmanTrailerCanevasContext();
 	ctx.clearRect(PACMAN_TRAILER_POSITION_X - PACMAN_TRAILER_SIZE, PACMAN_TRAILER_POSITION_Y - PACMAN_TRAILER_SIZE, PACMAN_TRAILER_SIZE * 2, PACMAN_TRAILER_SIZE * 2);
 }
+$(document).ready(function() {
+	function ag() {
+		gtag('event', "activist-guide", {
+		'event_category': "landingpage",
+		});
+	}
+	var agEl = document.getElementById('activist-guide');
+	agEl.onclick = ag;
+	function n() {
+		gtag('event', "newsletter", {
+		'event_category': "landingpage",
+		});
+	}
+	var nEl = document.getElementById('newsletter');
+	nEl.onclick = ag;
+	function s() {
+		gtag('event', "spenden", {
+		'event_category': "landingpage",
+		});
+	}
+	var sEl = document.getElementById('activist-guide');
+	sEl.onclick = s;
+}
