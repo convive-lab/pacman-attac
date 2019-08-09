@@ -34,10 +34,9 @@ function blinkHelp() {
 
 function initGame() {
 	gtag('event', "game start", {
-  'event_category': "game start",
+  'event_category': "game",
   'event_label': "game start",
 	});
-
 	var newgame = true;
 	if (newgame) {
 		stopPresentation();
@@ -288,6 +287,10 @@ function lifes(l) {
 }
 
 function gameover() {
+	gtag('event', "game over", {
+	'event_category': "game",
+	'event_label': "game over",
+	});
 	GAMEOVER = true;
 	$("#engage-popup").css('display',"flex");
 

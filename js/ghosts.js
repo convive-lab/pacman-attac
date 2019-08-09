@@ -282,15 +282,32 @@ function eatGhostPopup(ghost){
 								+"?subject="+texts[ghost.toUpperCase()].email_betreff
 								+"&body="+texts[ghost.toUpperCase()].email_text;
 	$("#ghost-email").attr("href", newMail);
+	function gaevent() {
+		console.log(ghost);
+		gtag('event', ghost, {
+		'event_category': "send mail",
+		'event_label': ghost,
+		});
+	}
+	var el = document.getElementById('ghost-email');
+	el.onclick = gaevent;
+
 	eatenghost = ghost;
 	if(typeof twttr.widgets !="undefined"){
 		twttr.widgets.createShareButton(
 			'/',
 			document.getElementById('ghost-popup-twit'),
 			{
-				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts[ghost.toUpperCase()].twitter
+				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts[ghost.toUpperCase()].twitter,
+
 			}
 		);
+		twttr.events.bind('click', function(event) {
+			gtag('event', ghost, {
+			'event_category': "send twitter",
+			'event_label': ghost,
+			});
+		});
 	}
 	var that = this;
 	that.ghost = ghost
