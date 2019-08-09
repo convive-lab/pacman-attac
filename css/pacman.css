@@ -150,7 +150,7 @@ span.combo, span.fruits {
 	padding: 5px 10px 10px 10px;
 	background-color: #000;
 }
-#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-green,
+#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-grune,
 #canvas-ghost-neos {
 	width: 550px;
 	height: 550px;
@@ -411,6 +411,10 @@ h3 {
 		top: 0px;
 		z-index: 5001;
 }
+.theme-box,
+#ghost-text{
+	font-family: "vcr";
+}
 #engage-popup{
 	display: flex;
 }
@@ -448,6 +452,12 @@ h3 {
 .ghost-popup-container .btn{
 	background-color: black;
 }
+#ghost-email{
+	border: 3px solid #FFF;
+	padding: 7px;
+	margin: 10px;
+	text-decoration: none;
+}
 .engage-popup-container #engage-break,
 .ghost-popup-container #continue {
     position: absolute;
@@ -455,6 +465,10 @@ h3 {
 }
 .popup-actions{
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup-actions{
 
 }
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) {
@@ -502,7 +516,7 @@ h3 {
 		width: auto;
 		top: -25px;
 	}
-	#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-green,
+	#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-grune,
 	#canvas-ghost-neos {
 		width: 95vw;
 		height: 95vw;

@@ -280,7 +280,7 @@ function testGhostsPacman() {
 	testGhostPacman('spo');
 	testGhostPacman('fpo');
 	testGhostPacman('ovp');
-	testGhostPacman('green');
+	testGhostPacman('grune');
 	testGhostPacman('neos');
 
 }

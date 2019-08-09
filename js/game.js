@@ -33,6 +33,11 @@ function blinkHelp() {
 }
 
 function initGame() {
+	gtag('event', "game start", {
+  'event_category': "game start",
+  'event_label': "game start",
+	});
+
 	var newgame = true;
 	if (newgame) {
 		stopPresentation();
@@ -340,7 +345,7 @@ function score(s, type) {
 		}
 	}
 
-	if (type && (type === "green" || type === "fpo" || type === "ovp" || type === "spo" || type === "neos") ) {
+	if (type && (type === "grune" || type === "fpo" || type === "ovp" || type === "spo" || type === "neos") ) {
 		erasePacman();
 		eraseGhost(type);
 		$("#board").append('<span class="combo">' + SCORE_GHOST_COMBO + '</span>');

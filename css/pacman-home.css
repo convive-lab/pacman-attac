@@ -63,7 +63,7 @@ position: relative;
 	color: #fff;
 }
 #canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp,
-#canvas-presentation-green,
+#canvas-presentation-grune,
 #canvas-presentation-neos  {
 	position: absolute;
 	width: 50px;
@@ -79,7 +79,7 @@ position: relative;
 #canvas-presentation-ovp {
 	top: 40px;
 }
-#canvas-presentation-green {
+#canvas-presentation-grune {
 	top: 190px;
 }
 #canvas-presentation-neos {
@@ -88,12 +88,12 @@ position: relative;
 #presentation-character-spo,
 #presentation-character-fpo,
 #presentation-character-ovp,
-#presentation-character-green,
+#presentation-character-grune,
 #presentation-character-neos,
 #presentation-name-spo,
 #presentation-name-fpo,
 #presentation-name-ovp,
-#presentation-name-green,
+#presentation-name-grune,
 #presentation-name-neos {
 	position: absolute;
 	width: 180px;
@@ -106,7 +106,7 @@ position: relative;
 #presentation-name-spo,
 #presentation-name-fpo,
 #presentation-name-ovp,
-#presentation-name-green,
+#presentation-name-grune,
 #presentation-name-neos {
 	left: 310px;
 	width: 230px;
@@ -123,7 +123,7 @@ position: relative;
 	top: 50px;
 	color: #61c2d0;
 }
-#presentation-character-green, #presentation-name-green {
+#presentation-character-grune, #presentation-name-grune {
 	top: 200px;
 	color: #67af27;
 }
@@ -148,6 +148,10 @@ position: relative;
 	border:5px solid #FFF;
 	position: absolute;
 	color: #FFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 #box-1 {
     left: -220px;
@@ -208,17 +212,17 @@ position: relative;
 	#presentation{
 		margin: 0px;
 	}
-	#canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp, #canvas-presentation-green, #canvas-presentation-neos {
+	#canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp, #canvas-presentation-grune, #canvas-presentation-neos {
     position: absolute;
     width: 35px;
     height: 35px;
     left: 15px;
 	}
-	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-green, #presentation-character-neos,
-	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-green, #presentation-name-neos {
+	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-grune, #presentation-character-neos,
+	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-grune, #presentation-name-neos {
 		font-size: 15px;
 	}
-	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-green, #presentation-character-neos
+	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-grune, #presentation-character-neos
 	{
 		left: 60px;
 	}
@@ -234,7 +238,7 @@ position: relative;
 		top: 150px;
 		color: #ed1b24;
 	}
-	#presentation-character-green, #presentation-name-green {
+	#presentation-character-grune, #presentation-name-grune {
 		top: 200px;
 		color: #67af27;
 	}
@@ -242,7 +246,7 @@ position: relative;
 		top: 250px;
 		color: #eb4188;
 	}
-	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-green, #presentation-name-neos {
+	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-grune, #presentation-name-neos {
 		left: 159px;
 		width: 203px;
 	}

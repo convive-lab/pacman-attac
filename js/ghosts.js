@@ -40,19 +40,19 @@ var GHOST_OVP_AFFRAID_TIMER = null;
 var GHOST_OVP_AFFRAID_STATE = 0;
 var GHOST_OVP_TUNNEL = false;
 
-var GHOST_GREEN_CANVAS_CONTEXT = null;
-var GHOST_GREEN_POSITION_X = 314;
-var GHOST_GREEN_POSITION_Y = 258;
-var GHOST_GREEN_DIRECTION = 4;
-var GHOST_GREEN_COLOR = "#67af27";
-var GHOST_GREEN_MOVING_TIMER = -1;
-var GHOST_GREEN_MOVING = false;
-var GHOST_GREEN_BODY_STATE = 3;
-var GHOST_GREEN_STATE = 0;
-var GHOST_GREEN_EAT_TIMER = null;
-var GHOST_GREEN_AFFRAID_TIMER = null;
-var GHOST_GREEN_AFFRAID_STATE = 0;
-var GHOST_GREEN_TUNNEL = false;
+var GHOST_GRUNE_CANVAS_CONTEXT = null;
+var GHOST_GRUNE_POSITION_X = 314;
+var GHOST_GRUNE_POSITION_Y = 258;
+var GHOST_GRUNE_DIRECTION = 4;
+var GHOST_GRUNE_COLOR = "#67af27";
+var GHOST_GRUNE_MOVING_TIMER = -1;
+var GHOST_GRUNE_MOVING = false;
+var GHOST_GRUNE_BODY_STATE = 3;
+var GHOST_GRUNE_STATE = 0;
+var GHOST_GRUNE_EAT_TIMER = null;
+var GHOST_GRUNE_AFFRAID_TIMER = null;
+var GHOST_GRUNE_AFFRAID_STATE = 0;
+var GHOST_GRUNE_TUNNEL = false;
 
 var GHOST_NEOS_CANVAS_CONTEXT = null;
 var GHOST_NEOS_POSITION_X = 276;
@@ -78,12 +78,11 @@ var GHOST_EAT_MOVING_SPEED = 6;
 var GHOST_AFFRAID_TIME = 8500;
 var GHOST_EAT_TIME = 5500;
 var GHOST_BODY_STATE_MAX = 6;
-
 function initGhosts() {
 	initGhost('spo');
 	initGhost('fpo');
 	initGhost('ovp');
-	initGhost('green');
+	initGhost('grune');
 	initGhost('neos');
 }
 function initGhost(ghost) {
@@ -131,17 +130,17 @@ function resetGhosts() {
 	GHOST_OVP_AFFRAID_TIMER = null;
 	GHOST_OVP_AFFRAID_STATE = 0;
 
-	GHOST_GREEN_POSITION_X = 314;
-	GHOST_GREEN_POSITION_Y = 258;
-	GHOST_GREEN_DIRECTION = 4;
-	GHOST_GREEN_MOVING_TIMER = -1;
-	GHOST_GREEN_MOVING = false;
-	GHOST_GREEN_BODY_STATE = 3;
-	GHOST_GREEN_STATE = 0;
-	GHOST_GREEN_EAT_TIMER = null;
-	GHOST_GREEN_AFFRAID_TIMER = null;
-	GHOST_GREEN_AFFRAID_STATE = 0;
-	GHOST_GREEN_POSITION_X = 314;
+	GHOST_GRUNE_POSITION_X = 314;
+	GHOST_GRUNE_POSITION_Y = 258;
+	GHOST_GRUNE_DIRECTION = 4;
+	GHOST_GRUNE_MOVING_TIMER = -1;
+	GHOST_GRUNE_MOVING = false;
+	GHOST_GRUNE_BODY_STATE = 3;
+	GHOST_GRUNE_STATE = 0;
+	GHOST_GRUNE_EAT_TIMER = null;
+	GHOST_GRUNE_AFFRAID_TIMER = null;
+	GHOST_GRUNE_AFFRAID_STATE = 0;
+	GHOST_GRUNE_POSITION_X = 314;
 
 	GHOST_NEOS_POSITION_X = 276;
 	GHOST_NEOS_POSITION_Y = 258;
@@ -162,7 +161,7 @@ function drawGhosts() {
 	drawGhost("spo");
 	drawGhost('fpo');
 	drawGhost('ovp');
-	drawGhost("green");
+	drawGhost("grune");
 	drawGhost("neos");
 }
 function drawGhost(ghost) {
@@ -194,7 +193,7 @@ function affraidGhosts() {
 	affraidGhost("spo");
 	affraidGhost("fpo");
 	affraidGhost("ovp");
-	affraidGhost("green");
+	affraidGhost("grune");
 	affraidGhost("neos");
 }
 function affraidGhost(ghost) {
@@ -225,14 +224,14 @@ function testStateGhosts() {
 	if ( GHOST_SPO_STATE === 1 ||
 		 GHOST_FPO_STATE === 1 ||
 		 GHOST_OVP_STATE === 1 ||
-		 GHOST_GREEN_STATE === 1 ||
+		 GHOST_GRUNE_STATE === 1 ||
 		 GHOST_NEOS_STATE === 1
 	) {
 		playWazaSound();
 	} else if ( GHOST_SPO_STATE === -1 ||
 		 GHOST_FPO_STATE === -1 ||
 		 GHOST_OVP_STATE === -1 ||
-		 GHOST_GREEN_STATE === -1 ||
+		 GHOST_GRUNE_STATE === -1 ||
 		 GHOST_NEOS_STATE === -1
 	) {
 		playGhostEatenSound();
@@ -261,6 +260,14 @@ function startEatGhost(ghost) {
 	}
 }
 eatenghost =""
+function HtmlEncode(s){
+	    return s
+	         .replace(/&/g, "&amp;")
+	         .replace(/</g, "&lt;")
+	         .replace(/>/g, "&gt;")
+	         .replace(/"/g, "&quot;")
+	         .replace(/'/g, "&#039;");
+}
 function eatGhostPopup(ghost){
 	$('#ghost-popup-twit').empty();
 	pauseGame();
@@ -269,14 +276,19 @@ function eatGhostPopup(ghost){
 	$("#ghost-popup").css('display', 'flex');
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
 	$("#ghost-name").html(ghost);
+	$("#ghost-text").html(texts[ghost.toUpperCase()].twitter);
 	$("#ghost-name").css("color",eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
+	var newMail = "mailto:"+texts[ghost.toUpperCase()].email_adress
+								+"?subject="+texts[ghost.toUpperCase()].email_betreff
+								+"&body="+texts[ghost.toUpperCase()].email_text;
+	$("#ghost-email").attr("href", newMail);
 	eatenghost = ghost;
 	if(typeof twttr.widgets !="undefined"){
 		twttr.widgets.createShareButton(
 			'/',
 			document.getElementById('ghost-popup-twit'),
 			{
-				text: 'Hello '+ghost
+				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts[ghost.toUpperCase()].twitter
 			}
 		);
 	}
@@ -323,7 +335,7 @@ function moveGhosts() {
 	moveGhost("spo");
 	moveGhost('fpo');
 	moveGhost('ovp');
-	moveGhost("green");
+	moveGhost("grune");
 	moveGhost("neos");
 }
 function moveGhost(ghost) {
@@ -556,7 +568,7 @@ function eraseGhosts() {
 	eraseGhost('spo');
 	eraseGhost('fpo');
 	eraseGhost('ovp');
-	eraseGhost('green');
+	eraseGhost('grune');
 	eraseGhost('neos');
 }
 
@@ -633,7 +645,7 @@ function stopGhosts() {
 	stopGhost('spo');
 	stopGhost('fpo');
 	stopGhost('ovp');
-	stopGhost('green');
+	stopGhost('grune');
 	stopGhost('neos');
 }
 
@@ -654,7 +666,7 @@ function pauseGhosts() {
 	pauseGhost('spo');
 	pauseGhost('fpo');
 	pauseGhost('ovp');
-	pauseGhost('green');
+	pauseGhost('grune');
 	pauseGhost('neos');
 }
 
@@ -670,7 +682,7 @@ function resumeGhosts() {
 	resumeGhost('spo');
 	resumeGhost('fpo');
 	resumeGhost('ovp');
-	resumeGhost('green');
+	resumeGhost('grune');
 	resumeGhost('neos');
 }
 

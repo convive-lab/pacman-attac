@@ -25,7 +25,17 @@
 		<script type="text/javascript" src="js/ghosts.js"></script>
 		<script type="text/javascript" src="js/home.js"></script>
 		<script type="text/javascript" src="js/sound.js"></script>
-<!-- twitter -->
+		<!-- twitter -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145422147-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-145422147-1');
+		</script>
+
 		<script>
 		window.twttr = (function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0],
@@ -58,8 +68,10 @@
 			}
 
 			$(document).ready(function() {
-
-
+				console.log("blub");
+				$.getJSON("js/texts.json", function(json) {
+				    window.texts = json;
+				});
 				//$.mobile.loading().hide();
 
 				loadAllSound();
@@ -98,14 +110,6 @@
 						}
 					}
 				});
-
-				// $("#home").on("click touchstart", function(e) {
-				// 	if ( $('#help').css("display") === "none") {
-				// 		e.preventDefault();
-				// 		simulateKeydown(13);
-				// 		alert("shit");
-				// 	}
-				// });
 				$("#control-up").click(function(e) {
 					console.log("down");
 					movePacman(4);
@@ -136,20 +140,12 @@
 				$("body").keyup(function(e) {
 					KEYDOWN = false;
 				});
-
-
-				// $("#start").click(function(e) {
-				// 	initGame(true);
-				// });
 				$('#start').on({ 'touchstart' : function(){ initGame();} });
 				$("body").keydown(function(e) {
 
 					if (HOME) {
-						console.log(e);
-						// initGame(true);
 
 					} else {
-						//if (!KEYDOWN) {
 							KEYDOWN = true;
 							if (PACMAN_DEAD && !LOCK) {
 								erasePacman();
@@ -188,7 +184,6 @@
 							} else if (GAMEOVER) {
 								initHome();
 							}
-						//}
 					}
 				});
 				$('#start').click(function(){
@@ -236,7 +231,7 @@
 					<canvas id="canvas-presentation-ovp"></canvas><div id="presentation-character-ovp">- OVP</div><div id="presentation-name-ovp">Kurz</div>
 					<canvas id="canvas-presentation-fpo"></canvas><div id="presentation-character-fpo">- FPO</div><div id="presentation-name-fpo">Hofer</div>
 					<canvas id="canvas-presentation-spo"></canvas><div id="presentation-character-spo">- SPO</div><div id="presentation-name-spo">Rendi-Wagner</div>
-					<canvas id="canvas-presentation-green"></canvas><div id="presentation-character-green">- GRUNE</div><div id="presentation-name-green">Kogler</div>
+					<canvas id="canvas-presentation-grune"></canvas><div id="presentation-character-grune">- GRUNE</div><div id="presentation-name-grune">Kogler</div>
 					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">Meinl-Reisinger</div>
 				</div>
 				<canvas id="trailer"></canvas>
@@ -269,13 +264,13 @@
 					<canvas id="canvas-ghost-spo"></canvas>
 					<canvas id="canvas-ghost-fpo"></canvas>
 					<canvas id="canvas-ghost-ovp"></canvas>
-					<canvas id="canvas-ghost-green"></canvas>
+					<canvas id="canvas-ghost-grune"></canvas>
 					<canvas id="canvas-ghost-neos"></canvas>
-					<div class="theme-box" id="box-1">Themenfeld 1</div>
-					<div class="theme-box" id="box-2">Themenfeld 2</div>
-					<div class="theme-box" id="box-3">Themenfeld 3</div>
-					<div class="theme-box" id="box-4">Themenfeld 4</div>
-					<div class="theme-box" id="box-5">Themenfeld 5</div>
+					<div class="theme-box" id="box-1">öffentliche Güter</div>
+					<div class="theme-box" id="box-2">nationale Souveränität</div>
+					<div class="theme-box" id="box-3">Gesundheit</div>
+					<div class="theme-box" id="box-4">Umwelt</div>
+					<div class="theme-box" id="box-5">Menschenrechte</div>
 					<div id="message"></div>
 				</div>
 				<div id="control">
@@ -294,10 +289,10 @@
 			<div class="ghost-popup-container">
 				<button id="continue" class="btn">X</button>
 				<div id="ghost-name"></div>
-					Alle Wiener Kinder und Jugendlichen, aber auch deren Eltern, Lehrer_innen oder Elementarpädagog_innen können sich bei Problemen in der Schule oder im Kindergarten an die Bildungsombudsstelle wenden.
+				<div id="ghost-text"></div>
 				<div class="popup-actions">
-					<div id="ghost-popup-twit"></div>
-					<button id="email" class="btn">E-Mail senden</button>
+					<div id="ghost-popup-twit" data-size="large"></div>
+					<a href="" id="ghost-email" class="btn">E-Mail senden</a>
 				</div>
 			</div>
 		</div>
