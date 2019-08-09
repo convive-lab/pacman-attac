@@ -2,58 +2,58 @@
   "SPO":
     {"twitter_handler":"@rendiwagner",
      "name":"Rendi-Wagner",
-     "email_introduction":"Sehr geehrte Frau Rendi-Wagner%0D%0A%",
-     "email_adress":"pamela.rendi-wagner@​parlament.gv.at",
-     "email_betreff":"Verpflichtungserklärung gegen ISDS-Sonderklagerechte"
+     "email_introduction":"Sehr geehrte Frau Rendi-Wagner%0D%0A%0D%0A ",
+     "email_adress":"pamela.rendi-wagner@​parlament.gv.at"
    },
    "OVP":
      {"twitter_handler":"@sebastiankurz",
       "name":"Kurz",
-      "email_introduction":"Sehr geehrte Herr Kurz%0D%0A%",
-      "email_adress":"team@sebastian-kurz.at",
-      "email_betreff":"Verpflichtungserklärung gegen ISDS-Sonderklagerechte"
+      "email_introduction":"Sehr geehrte Herr Kurz%0D%0A%0D%0A ",
+      "email_adress":"team@sebastian-kurz.at"
     },
     "FPO":
       {"twitter_handler":"@norbertghofer",
-       "name":"hofer",
-       "email_introduction":"Sehr geehrte Herr Hofer%0D%0A%",
-       "email_adress":"volker.hoeferl@fpoe.at",
-       "email_betreff":"Verpflichtungserklärung gegen ISDS-Sonderklagerechte"
+       "name":"Hofer",
+       "email_introduction":"Sehr geehrte Herr Hofer%0D%0A%0D%0A ",
+       "email_adress":"volker.hoeferl@fpoe.at"
     },
     "GRUNE":
      {"twitter_handler":"@WKogler",
       "name":"Kogler",
-      "email_introduction":"Sehr geehrte Herr Kogler%0D%0A%",
-      "email_adress":"dialogbuero.wien@gruene.at",
-      "email_betreff":"Verpflichtungserklärung gegen ISDS-Sonderklagerechte"
+      "email_introduction":"Sehr geehrte Herr Kogler%0D%0A%0D%0A ",
+      "email_adress":"dialogbuero.wien@gruene.at"
     },
     "NEOS":
       {"twitter_handler":"@BMeinl⁩",
        "name":"Meinl-Reisinger",
-       "email_introduction":"Sehr geehrte Frau Meinl-Reisinger%0D%0A%",
-       "email_adress":"beate.meinl@​neos.eu",
-       "email_betreff":"Verpflichtungserklärung gegen ISDS-Sonderklagerechte"
+       "email_introduction":"Sehr geehrte Frau Meinl-Reisinger%0D%0A%0D%0A ",
+       "email_adress":"beate.meinl@​neos.eu"
     },
     "themen":{
       "0":{
-        "twitter":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Jetzt Verpflichtungserklärung gegen ISDS unterzeichnen! anders-handeln.at/pledge-2019 #WeWantYou",
-        "email_text":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Zum Beispiel wollte die estnische Hauptstadt Tallin eine Obergrenze für Wasserpreise festlegen und erhielt dafür eine Klage über 90 Millionen Euro. Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen!%0D%0A%0D%0AJetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! anders-handeln.at/pledge-2019"
+        "twitter":"Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Jetzt Verpflichtungserklärung gegen ISDS unterzeichnen! anders-handeln.at/pledge-2019",
+        "email_betreff":"Unsere öffentlichen Güter schützen – nein zu ISDS",
+        "email_text":"die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Zum Beispiel wollte die estnische Hauptstadt Tallin eine Obergrenze für Wasserpreise festlegen und erhielt dafür eine Klage über 90 Millionen Euro (https://www.neues-deutschland.de/artikel/968257.schiedsgericht-verhandelt-wasserpolitik.html). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen!%0D%0A%0D%0A Jetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
       },
       "1":{
-        "twitter":"ISDS-Sonderklagerechte in Handels- und Investitionsabkommen richten sich gegen nationale Souveränität und lokale Demokratie. Kroatien wurde von einem Investor auf über 500 Mio Dollar verklagt! Jetzt Erklärung gegen ISDS unterzeichnen! anders-handeln.at/pledge-2019 #WeWantYou",
-        "email_text":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen nationale Souveränität und lokale Demokratie.%0D%0AAbkommen mit Sonderklagerechten von Konzernen ermöglichen es zum Beispiel, dass die Anwohner*innen von Dubrovnik in Kroatien mit ihrem Protest gegen ein Luxus Golf Resort, das die Baugenehmigungen auf illegale Weise erworben hatte, eine Klage über 500 Millionen US Dollar ernteten. Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt.%0D%0ADas kann so nicht weitergehen!%0D%0A%0D%0AJetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! anders-handeln.at/pledge-2019"
+        "twitter":"ISDS-Sonderklagerechte in Handels- und Investitionsabkommen richten sich gegen nationale Souveränität. Kroatien wurde von einem Investor auf über 500 Mio. Dollar verklagt! Jetzt Erklärung gegen ISDS unterzeichnen! anders-handeln.at/pledge-2019",
+        "email_betreff":"Nationale Souveränität schützen – keine Sonderklagerechte für Konzerne",
+        "email_text":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen nationale Souveränität und lokale Demokratie. %0D%0A%0D%0A Abkommen mit den gefährlichen ISDS-Sonderklagerechten für Konzerne untergraben Handlungsmöglichkeiten der Bevölkerung. Die BewohnerInnen von Dubrovnik in Kroatien protestierten jahrelang gegen ein Luxus Golf Resort, das die Baugenehmigungen auf illegale Weise erworben hatte. Nun verklagte der Investor Kroatien auf über 500 Millionen US Dollar (https://www.youtube.com/watch?v=fZSC3IzcjBs). Auch Österreich wird bereits zum zweiten Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen!%0D%0A%0D%0A Unterzeichen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte: https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
       },
       "2":{
-        "twitter":"Die gefährlichen ISDS-Sonderklagerecht richten sich gegen die Gesundheit von KonsumentInnen. Ein US-Konzern verklagte eine kanadische Provinz, weil sie ein giftiges Pestizid verbieten wollte! Verpflichten Sie sich jetzt gegen ISDS! anders-handeln.at/pledge-2019 #WeWantYou",
-        "email_text":"In Handels- und Investitionsabkommen sind gefährliche ISDS-Sonderklagerecht enthalten, die sich gegen die Gesundheit von Konsument*innen und nachhaltige Landwirtschaft richten. Zum Beispiel klagte das US-amerikanische Unternehmen Dow AgroSciences  weil die Provinz Quebec ein toxisches Pestizid mit nachweislich erhöhten Krebsraten und Geburtsdefekten verbieten wollte. Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen! %0D%0A%0D%0AJetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! www.anders-handeln.at/pledge-2019"
+        "twitter":"Gefährliche ISDS-Sonderklagerecht richten sich gegen die Gesundheit von KonsumentInnen. US-Konzern verklagte eine kanadische Provinz, weil sie ein giftiges Pestizid verbieten wollte! Unterschreiben Sie jetzt gegen ISDS! anders-handeln.at/pledge-2019",
+        "email_betreff":"Für unsere Gesundheit  – gegen Sonderklagerechte",
+        "email_text":"in Handels- und Investitionsabkommen sind gefährliche ISDS-Sonderklagerecht enthalten, die sich gegen die Gesundheit von KonsumentInnen und nachhaltige Landwirtschaft richten. %0D%0A%0D%0A Zum Beispiel klagte das US-amerikanische Unternehmen Dow AgroSciences,  weil die Provinz Quebec ein toxisches Pestizid mit nachweislich erhöhten Krebsraten und Geburtsdefekten verbieten wollte (https://www.attac.at/kampagnen/stopp-isds/aktionstage.html#c7596). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt.%0D%0A%0D%0A Das kann so nicht weitergehen! Unterzeichnen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
       },
       "3":{
-        "twitter":"Achtung: Gefährliche ISDS-Sonderklagerechte in Investitionsabkommen verhindern Klimaschutz. Italien wird von einem Ölkonzern verklagt, weil sich die Bevölkerung an der Adria erfolgreich gegen Ölbohrungen vor ihrer Haustür wehrte. #WeWantYou to sign anders-handeln.at/pledge-2019",
-        "email_text":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen Klimaschutz. Abkommen mit Sonderklagerechten von Konzernen ermöglichen es zum Beispiel, dass Italien auf Grundlage des Energiecharta-Vertrags von dem britischen Unternehmen Rockhopper verklagt wird, weil sich die lokale Bevölkerung an der Adria gegen Ölbohrungen vor ihrer Haustür erfolgreich wehrte. Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt.%0D%0ADas kann so nicht weitergehen!%0D%0A%0D%0AJetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! www.anders-handeln.at/pledge-2019"
+        "twitter":"Achtung: Gefährliche ISDS-Sonderklagerechte in Investitionsabkommen verhindern Klimaschutz! Italien wird von einem Ölkonzern verklagt, weil sich die Bevölkerung erfolgreich gegen Ölbohrungen an der Adria wehrte. anders-handeln.at/pledge-2019",
+        "email_betreff":"Werden Sie aktiv gegen Konzern-Privilegien!",
+        "email_text":"die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen Klimaschutz. Abkommen mit ISDS-Sonderklagerechten von Konzernen ermöglichen es zum Beispiel, dass Italien auf Grundlage des Energiecharta-Vertrags vom britischen Unternehmen Rockhopper verklagt wird, weil sich die lokale Bevölkerung an der Adria gegen Ölbohrungen vor ihrer Haustür erfolgreich wehrte (https://www.attac.at/kampagnen/stopp-isds/isds-faelle.html#c7594). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. %0D%0A%0D%0A Das kann so nicht weitergehen! Unterzeichnen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte! https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
       },
       "4":{
-        "twitter":"Mehr Investionsabkommen=mehr Investitionen? Falsch, es gibt keine empirischen Belege. Aber die ISDS-Sonderklagerechte darin sind gefährlich! In über 900 Fällen wurden Staaten von Konzernen verklagt, u.a. weil sie Menschenrechte schützen. #WeWantYou anders-handeln.at/pledge-2019",
-        "email_text":"Es gibt keine empirischen Belege dafür, dass Investitions-Abkommen alleine zu mehr Investitionen führen. Die ISDS-Sonderklagerechte darin sind sogar gefährlich, in über 900 Fällen wurden Staaten schon von Konzernen verklagt, u.a. weil sie Menschenrechte geschützt haben. Die Klagerechte in Kombination mit zahnlosen internationalen Konventionen führen zu krasser Ausbeutung: So arbeiten beispielsweise in Ghana trotz internationaler Konventionen rund zwei Millionen Kinder auf Kakaoplantagen, deren Kakao auch in österreichischen Supermärkten landet.%0D%0A%0D%0AJetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte und für Menschenrechte unterzeichnen! www.anders-handeln.at/pledge-2019"
+        "twitter":"Mehr Investionsabkommen=mehr Investitionen? Falsch, empirischen Belege fehlen. Aber sie enthalten gefährliche ISDS-Sonderklagerechte! In über 900 Fällen wurden Staaten von Konzernen verklagt. Jetzt Menschenrechte schüzen. anders-handeln.at/pledge-2019",
+        "email_betreff":"Menschenrechte unter Beschuss: Jetzt gegen ISDS unterzeichnen",
+        "email_text":"es gibt keine empirischen Belege dafür, dass Investitions-Abkommen alleine zu mehr Investitionen führen. Die ISDS-Sonderklagerechte darin sind sogar gefährlich, in über 900 Fällen wurden Staaten schon von Konzernen verklagt, u.a. weil sie Menschenrechte geschützt haben. Die Klagerechte in Kombination mit zahnlosen internationalen Konventionen führen zu krasser Ausbeutung: So arbeiten beispielsweise in Ghana trotz internationaler Konventionen rund zwei Millionen Kinder auf Kakaoplantagen, deren Kakao auch in österreichischen Supermärkten landet. %0D%0A%0D%0A Jetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte und für Menschenrechte unterzeichnen! https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
       }
     }
 }
