@@ -275,12 +275,15 @@ function eatGhostPopup(ghost){
 
 	$("#ghost-popup").css('display', 'flex');
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
-	$("#ghost-name").html(ghost);
-	$("#ghost-text").html(texts[ghost.toUpperCase()].twitter);
+	$("#ghost-name").html("An: "+ texts[ghost.toUpperCase()].name);
+	$("#ghost-text").html(texts.themen[themenFeld].twitter);
+	$("#ghost-text").removeClass();
+	$("#ghost-text").addClass("thema_"+themenFeld);
+
 	$("#ghost-name").css("color",eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
 	var newMail = "mailto:"+texts[ghost.toUpperCase()].email_adress
 								+"?subject="+texts[ghost.toUpperCase()].email_betreff
-								+"&body="+texts[ghost.toUpperCase()].email_text;
+								+"&body="+texts[ghost.toUpperCase()].email_introduction+texts.themen[themenFeld].email_text;
 	$("#ghost-email").attr("href", newMail);
 	function gaevent() {
 		console.log(ghost);
@@ -298,7 +301,7 @@ function eatGhostPopup(ghost){
 			'/',
 			document.getElementById('ghost-popup-twit'),
 			{
-				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts[ghost.toUpperCase()].twitter,
+				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts.themen[themenFeld].twitter,
 
 			}
 		);

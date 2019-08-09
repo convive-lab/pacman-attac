@@ -326,6 +326,8 @@ function testBubblesPacman() {
 				BUBBLES_ARRAY[i] = bubble.substr( 0, bubble.length - 1 ) + "1"
 
 				if ( type === "s" ) {
+					var sBubble = bubbleParams[1]+";"+bubbleParams[2]+";"+bubbleParams[0]+";0";
+					window.themenFeld=SUPER_BUBBLES.indexOf(sBubble)
 					setSuperBubbleOnXY( testX, testY, "1" );
 					score( SCORE_SUPER_BUBBLE );
 					playEatPillSound();

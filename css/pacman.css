@@ -415,6 +415,21 @@ h3 {
 #ghost-text{
 	font-family: "vcr";
 }
+#ghost-text.thema_0{
+	color:#ed1b24;
+}
+#ghost-text.thema_1{
+	color:#005ca7;
+}
+#ghost-text.thema_2{
+	color:#61c2d0;
+}
+#ghost-text.thema_3{
+	color:#67af27;
+}
+#ghost-text.thema_4{
+	color:#eb4188;
+}
 #engage-popup{
 	display: flex;
 }
