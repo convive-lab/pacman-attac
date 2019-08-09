@@ -444,6 +444,6 @@ $(document).ready(function() {
 		'event_category': "landingpage",
 		});
 	}
-	var sEl = document.getElementById('activist-guide');
+	var sEl = document.getElementById('spenden');
 	sEl.onclick = s;
-}
+});
