@@ -301,12 +301,14 @@ function eatGhostPopup(ghost){
 	$("#ghost-tweet").attr("href", newTweet);
 
 	function gaevent() {
+		score(1000);
 		gtag('event', ghost, {
 		'event_category': "send mail",
 		'event_label': ghost,
 		});
 	}
 	function gatweet() {
+		score(1000);
 		gtag('event', ghost, {
 		'event_category': "send twitter",
 		'event_label': ghost,
