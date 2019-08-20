@@ -25,7 +25,7 @@ var HELP_DELAY = 1500;
 var HELP_TIMER = -1;
 var email=false;
 var twitter=false;
-var value
+var value;
 
 function blinkHelp() {
 	if ( $('.help-button').attr("class").indexOf("yo") > -1 ) {

@@ -278,7 +278,7 @@ function eatGhostPopup(ghost){
 	$("#ghost-popup").css('display', 'flex');
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
 	if(value!="")$("#ghost-von").html("Von: "+ value);
-	$("#ghost-von").html("Von: Unbekannt");
+	else $("#ghost-von").html("Von: Unbekannt");
 	$("#ghost-name").html("An: "+ texts[ghost.toUpperCase()].name);
 	$("#ghost-text").html(texts.themen[themenFeld].twitter);
 	$("#ghost-text").removeClass();
