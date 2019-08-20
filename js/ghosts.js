@@ -277,43 +277,72 @@ function eatGhostPopup(ghost){
 
 	$("#ghost-popup").css('display', 'flex');
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
+	if(value!="")$("#ghost-von").html("Von: "+ value);
+	$("#ghost-von").html("Von: Unbekannt");
 	$("#ghost-name").html("An: "+ texts[ghost.toUpperCase()].name);
 	$("#ghost-text").html(texts.themen[themenFeld].twitter);
 	$("#ghost-text").removeClass();
 	$("#ghost-text").addClass("thema_"+themenFeld);
+	if(email) $("#ghost-email").hide();
+	else {
+		$("#ghost-email").show();
+	}
+	if(twitter) $("#ghost-popup-twit").hide();
+	else {
+		$("#ghost-popup-twit").show();
+	}
 
 	$("#ghost-name").css("color",eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
 	var newMail = "mailto:"+texts[ghost.toUpperCase()].email_adress
 								+"?subject="+texts.themen[themenFeld].email_betreff
 								+"&body="+texts[ghost.toUpperCase()].email_introduction+texts.themen[themenFeld].email_text;
 	$("#ghost-email").attr("href", newMail);
+	var newTweet = "https://twitter.com/intent/tweet?hashtags=WeWantYou&text="+texts[ghost.toUpperCase()].twitter_handler +" " +texts.themen[themenFeld].twitter+"&tw_p=tweetbutton&url=https://anders-handeln.at/pledge-2019"
+	$("#ghost-tweet").attr("href", newTweet);
+
 	function gaevent() {
 		gtag('event', ghost, {
 		'event_category': "send mail",
 		'event_label': ghost,
 		});
 	}
-	var el = document.getElementById('ghost-email');
-	el.onclick = gaevent;
-	eatenghost = ghost;
-	if(typeof twttr.widgets !="undefined"){
-		twttr.widgets.createShareButton(
-			'/',
-			document.getElementById('ghost-popup-twit'),
-			{
-				text: texts[ghost.toUpperCase()].twitter_handler +" " +texts.themen[themenFeld].twitter,
-				hashtags:"WeWantYou",
-				url:"anders-handeln.at/pledge-2019"
-
-			}
-		);
-		twttr.events.bind('click', function(event) {
-			gtag('event', ghost, {
-			'event_category': "send twitter",
-			'event_label': ghost,
-			});
+	function gatweet() {
+		gtag('event', ghost, {
+		'event_category': "send twitter",
+		'event_label': ghost,
 		});
 	}
+	if(email)$("#ghost-email").show();
+	else $("#ghost-email").hide();
+	if(twitter)$("#ghost-tweet").show();
+	else $("#ghost-tweet").hide();
+	if(!twitter && !email){
+		$("#ghost-email").show();
+		$("#ghost-tweet").show();
+	}
+	var el = document.getElementById('ghost-email');
+	el.onclick = gaevent;
+	var el = document.getElementById('ghost-tweet');
+	el.onclick = gatweet;
+	eatenghost = ghost;
+	// if(typeof twttr.widgets !="undefined"){
+	// 	twttr.widgets.createShareButton(
+	// 		'/',
+	// 		document.getElementById('ghost-popup-twit'),
+	// 		{
+	// 			text: texts[ghost.toUpperCase()].twitter_handler +" " +texts.themen[themenFeld].twitter,
+	// 			hashtags:"WeWantYou",
+	// 			url:"anders-handeln.at/pledge-2019"
+	//
+	// 		}
+	// 	);
+	// 	twttr.events.bind('click', function(event) {
+	// 		gtag('event', ghost, {
+	// 		'event_category': "send twitter",
+	// 		'event_label': ghost,
+	// 		});
+	// 	});
+	// }
 	var that = this;
 	that.ghost = ghost
 		$("#continue").click(function(){

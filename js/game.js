@@ -23,6 +23,9 @@ var TIME_FRUITS = 0;
 
 var HELP_DELAY = 1500;
 var HELP_TIMER = -1;
+var email=false;
+var twitter=false;
+var value
 
 function blinkHelp() {
 	if ( $('.help-button').attr("class").indexOf("yo") > -1 ) {
@@ -31,12 +34,42 @@ function blinkHelp() {
 		$('.help-button').addClass("yo");
 	}
 }
+function validate(){
+	value = $("#email_twitter").val();
+	email = validateEmail(value);
+	if(email){
+		$("#twitter").hide();
+		$(".input-id").addClass("validated");
+	}
+	else{
+		$("#twitter").show();
+		$(".input-id").removeClass("validated");
+		twitter = validateTwitter(value);
+		if(twitter){
+			$("#email").hide();
+			$(".input-id").addClass("validated");
+		}
+		else{
+			$(".input-id").removeClass("validated");
+			$("#email").show();
+		}
+	}
+}
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+function validateTwitter(twitter){
+	var re = /^(@[a-z]*)\w+/g;
+	return(re.test(String(twitter).toLowerCase()));
+}
 
 function initGame() {
 	gtag('event', "game start", {
   'event_category': "game",
   'event_label': "game start",
 	});
+	$('#manual').fadeOut("slow");
 	var newgame = true;
 	if (newgame) {
 		stopPresentation();

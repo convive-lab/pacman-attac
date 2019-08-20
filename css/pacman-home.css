@@ -20,15 +20,62 @@
 	font-style: inherit;
 	color: #f9b200;
 }
+.input-id.validated input,
+.input-id.validated h2{
+	color:green;
+}
+.btn{
+	color: #fff;
+	padding: 10px;
+	margin: auto;
+	margin-top: auto;
+	border-radius: 0px;
+	z-index: 1000;
+	background-color: #eaab00; /* gold */
+  /* Single pixel data uri image http://jsfiddle.net/LPxrT/
+  /* background-image: gold, gold, white */
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),  url('data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 100%, 0% 2px;
+  background-position: top center, top center, bottom center;
+  -webkit-animation: drawBorderFromCenter 4s;
+}
+.btn#ghost-tweet{
+	background-image: url("data:image/gif;base64,R0lGODlhAQABAIABAFys6+IAGiH+EUNyZWF0ZWQgd2l0aCBHSU1QACwAAAAAAQABAAACAkQBADs=");
+	background-color:#55acee;
+	border: 3px solid #FFF;
+	padding: 7px;
+	text-decoration: none;
+	margin-top: 10px;
+}
+@-webkit-keyframes drawBorderFromCenter {
+    0% {
+      background-size: 0 2px, 0 0, 100% 100%;
+    }
+    20% {
+      background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66%
+    {
+      background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99%
+    {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
 .game #home #start{
 	color: #f9b200;
-	padding: 30px;
+	padding: 10px;
 	width: 150px;
 	margin: auto;
+  margin-top: auto;
 	background-color: #000;
 	border-radius: 0px;
-	border:3px solid #FFF;
+	border: 3px solid #FFF;
 	z-index: 1000;
+	margin-top: 20px;
 }
 #canvas-home-title-pacman {
 	background-color: #000;
@@ -277,8 +324,12 @@ position: relative;
 }
 
 @media screen and (max-height:640px), screen and (min-device-height : 480px) and (max-device-height : 640px) and (-webkit-device-pixel-ratio: 3) {
-
+	#manual .left{
+		display: none;
+	}
 }
 @media screen and (max-height:480px), screen and (min-device-height : 320px) and (max-device-height : 480px) {
-
+	#manual  .left{
+		display: none;
+	}
 }

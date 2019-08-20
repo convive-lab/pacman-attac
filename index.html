@@ -80,7 +80,7 @@
 				    window.texts = json;
 				});
 				//$.mobile.loading().hide();
-
+				validate();
 				loadAllSound();
 
 				HELP_TIMER = setInterval('blinkHelp()', HELP_DELAY);
@@ -147,7 +147,11 @@
 				$("body").keyup(function(e) {
 					KEYDOWN = false;
 				});
-				$('#start').on({ 'touchstart' : function(){ initGame();} });
+				$('#start').on({ 'touchstart' : function(){ $('#manual').fadeIn("slow");} });
+				$('#start').click(function(){
+					$('#manual').fadeIn("slow");
+				})
+				// $('#start').on({ 'touchstart' : function(){ initGame();} });
 				$("body").keydown(function(e) {
 
 					if (HOME) {
@@ -193,9 +197,6 @@
 							}
 					}
 				});
-				$('#start').click(function(){
-					initGame();
-				})
 			});
 		</script>
 
@@ -208,19 +209,45 @@
 
 					<div id="sound"></div>
 
-					<div id="help">
-						<h2>Help</h2>
+			<div id="help">
+				<h2>Help</h2>
+				<table align="center" border="0" cellPadding="2" cellSpacing="0">
+					<tbody>
+						<tr><td>Arrow Left : </td><td>Move Left</td></tr>
+						<tr><td>Arrow Right : </td><td>Move Right</td></tr>
+						<tr><td>Arrow Down : </td><td>Move Down</td></tr>
+						<tr><td>Arrow Up : </td><td>Move Up</td></tr>
+						<tr><td colspan="2">&nbsp;</td></tr>
+						<tr><td>P : </td><td>PAUSE</td></tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="manual">
+				<h2>Anleitung</h2>
+				<ul>
+					<li>Fresse alle weißen und <span class="textcolor">farbigen Punkte</span> um ins nächste Level zu kommen</li>
+					<li>Die <span class="textcolor">farbigen Punkte</span> sind besonders leckere Argumente gegen ISDS-Konzern-Sonderklagerechte (Farbbedeutung steht in den <span class="box"> farbigen Kästen</span>)</li>
+					<li>Wenn du ein Farb-Argument gefressen hast, kannst du die Politiker*innen damit füttern – <span class="red" >ACHTUNG: </span> Ohne Farb-Argument stirbst du bei einer Begegnung</li>
+					<li>Die farblich passenden Argumente sind besonders wirksam: Bsp: Das <span class="red" >öffentliche Güter Argument (rot)</span> an <span class="red" >Rendi-Wagner</span> liefern!</li>
+				</ul>
+				<div class="second-part">
+					<div class="left">
+						<h3>Steuerung</h3>
 						<table align="center" border="0" cellPadding="2" cellSpacing="0">
 							<tbody>
-								<tr><td>Arrow Left : </td><td>Move Left</td></tr>
-								<tr><td>Arrow Right : </td><td>Move Right</td></tr>
-								<tr><td>Arrow Down : </td><td>Move Down</td></tr>
-								<tr><td>Arrow Up : </td><td>Move Up</td></tr>
-								<tr><td colspan="2">&nbsp;</td></tr>
+								<tr><td>&larr; : </td><td>Move Left</td></tr>
+								<tr><td>&rarr; : </td><td>Move Right</td></tr>
+								<tr><td>&darr; : </td><td>Move Down</td></tr>
+								<tr><td>&uarr; : </td><td>Move Up</td></tr>
 								<tr><td>P : </td><td>PAUSE</td></tr>
 							</tbody>
 						</table>
 					</div>
+					<div class="right">
+						<button id="start-second" class="btn" onclick="initGame()">Alles klar</button>
+					</div>
+				</div>
+			</div>
 
 			<div id="home">
 				<div class="header">
@@ -243,8 +270,8 @@
 				</div>
 				<canvas id="trailer"></canvas>
 				<div class="input-id">
-					<h2>E-Mail/Twitter</h2>
-					<input class="input-user" type="text"></input>
+					<h2><span id="email">E-Mail</span> <span id="twitter">Twitter</span></h2>
+					<input class="input-user" id="email_twitter" type="text" onchange="validate()"></input>
 				</div>
 				<button id="start">start</button>
 
@@ -295,9 +322,12 @@
 			<div class="ghost-popup-container">
 				<button id="continue" class="btn">X</button>
 				<div id="ghost-name"></div>
+				<div id="ghost-von"></div>
 				<div id="ghost-text"></div>
 				<div class="popup-actions">
 					<div id="ghost-popup-twit" data-size="large"></div>
+
+					<a href="" id="ghost-tweet" class="btn">Tweet senden</a>
 					<a href="" id="ghost-email" class="btn">E-Mail senden</a>
 				</div>
 			</div>
