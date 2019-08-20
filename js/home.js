@@ -432,18 +432,18 @@ $(document).ready(function() {
 	}
 	var agEl = document.getElementById('activist-guide');
 	agEl.onclick = ag;
-	function n() {
-		gtag('event', "newsletter", {
-		'event_category': "landingpage",
-		});
-	}
-	var nEl = document.getElementById('newsletter');
-	nEl.onclick = ag;
-	function s() {
-		gtag('event', "spenden", {
-		'event_category': "landingpage",
-		});
-	}
-	var sEl = document.getElementById('spenden');
-	sEl.onclick = s;
+	// function n() {
+	// 	gtag('event', "newsletter", {
+	// 	'event_category': "landingpage",
+	// 	});
+	// }
+	// var nEl = document.getElementById('newsletter');
+	// nEl.onclick = ag;
+	// function s() {
+	// 	gtag('event', "spenden", {
+	// 	'event_category': "landingpage",
+	// 	});
+	// }
+	// var sEl = document.getElementById('spenden');
+	// sEl.onclick = s;
 });
