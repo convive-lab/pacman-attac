@@ -1,4 +1,3 @@
-# Pac-Man
-Pac-Man game written in HTML5 + CSS3 + jQuery with Canvas. This WebApp is a Responsive Web Design (RWD) website.
+# Attac Pacman
 
-<a href="https://pacman-e281c.firebaseapp.com">Play game</a>
+Pac-Man game to get you in contact with the austrain politicians.

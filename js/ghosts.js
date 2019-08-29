@@ -297,7 +297,7 @@ function eatGhostPopup(ghost){
 								+"?subject="+texts.themen[themenFeld].email_betreff
 								+"&body="+texts[ghost.toUpperCase()].email_introduction+texts.themen[themenFeld].email_text;
 	$("#ghost-email").attr("href", newMail);
-	var newTweet = "https://twitter.com/intent/tweet?hashtags=WeWantYou&text="+texts[ghost.toUpperCase()].twitter_handler +" " +texts.themen[themenFeld].twitter+"&tw_p=tweetbutton&url=https://anders-handeln.at/pledge-2019"
+	var newTweet = "https://twitter.com/intent/tweet?hashtags=WeWantYou&text="+texts.themen[themenFeld].twitter+" "+texts[ghost.toUpperCase()].twitter_handler +"&tw_p=tweetbutton&url=https://anders-handeln.at/pledge-2019"
 	$("#ghost-tweet").attr("href", newTweet);
 
 	function gaevent() {
