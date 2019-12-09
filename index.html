@@ -79,13 +79,16 @@
 
 				$.getJSON("js/texts.json", function(json) {
 				    window.texts = json;
-						console.log(json);
 						json.ghosts.forEach(function(g,i){
-							console.log(g,i);
-							$("#presentation-name-"+i).text(g.name_short)
-							$("#presentation-character-"+i).text(g.ghost_name)
+							window["GHOST_"+i+"_COLOR"]= g.color;
+							$("#presentation-name-"+i).text(g.name_short);
+							$("#presentation-name-"+i).css("color",g.color);
+							$("#presentation-character-"+i).text(g.ghost_name);
+							$("#presentation-character-"+i).css("color",g.color);
 
 						});
+						drawPresentation();
+
 				})
 				.fail(function(jqXHR, textStatus, errorThrown) {
 					console.log("error " + textStatus);
@@ -152,6 +155,7 @@
 				});
 				$("#engage-break").on("mousedown touchstart", function(e) {
 					initHome();
+					drawPresentation();
 				})
 
 
@@ -206,6 +210,7 @@
 								}
 							} else if (GAMEOVER) {
 								initHome();
+								drawPresentation();
 							}
 					}
 				});

@@ -96,6 +96,12 @@ function initHome() {
 	ctx.fill();
 	ctx.closePath();
 
+
+
+}
+function drawPresentation(){
+	var ctx = null;
+	var canvas = null;
 	canvas = document.getElementById('canvas-presentation-0');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
@@ -140,10 +146,8 @@ function initHome() {
 	}
 	ctx.fillStyle = GHOST_0_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-
 	startPresentation();
 }
-
 function startPresentation() {
 	$("#presentation *").hide();
 
@@ -152,6 +156,7 @@ function startPresentation() {
 		HOME_PRESENTATION_TIMER = setInterval("nextSequencePresentation()", 200);
 	}
 }
+
 function stopPresentation() {
 
 	if (HOME_PRESENTATION_TIMER != -1) {

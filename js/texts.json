@@ -4,7 +4,7 @@
   "ghosts":[
     {
        "ghost_name":"BADEN WUERTTEMBERG",
-       "color":"",
+       "color":"#55aa76",
        "twitter_handler":"@GrueneBW",
        "name":"Winfried Kretschmann",
        "name_short":"Kretschmann",
@@ -13,7 +13,7 @@
     },
     {
        "ghost_name":"BRANDENBURG",
-       "color":"",
+       "color":"#a7d91c",
        "twitter_handler":"@GrueneBBG",
        "name":"Ursula Nonnenmacher",
        "name_short":"Nonnenmacher",
@@ -22,6 +22,7 @@
     },
     {
        "ghost_name":"HAMBURG",
+       "color":"#77fd00",
        "twitter_handler":"@GRUENE_Hamburg",
        "name":"Katharina Fegebank",
        "name_short":"Fegebank",
@@ -30,6 +31,7 @@
     },
     {
        "ghost_name":"HESSEN",
+       "color":"#17f0b3",
        "twitter_handler":"@gruenehessen",
        "name":"Tarek Al-Wazir",
        "name_short":"Al-Wazir",
@@ -38,6 +40,7 @@
     },
     {
        "ghost_name":"RHEINLAND-PFALZ",
+       "color":"#67af27",
        "twitter_handler":"@gruene_rlp⁩",
        "name":"Ulrike Höfken",
        "name_short":"Hofken",
