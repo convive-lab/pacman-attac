@@ -277,11 +277,11 @@ function killingPacman() {
 }
 
 function testGhostsPacman() {
-	testGhostPacman('spo');
-	testGhostPacman('fpo');
-	testGhostPacman('ovp');
-	testGhostPacman('grune');
-	testGhostPacman('neos');
+	testGhostPacman('0');
+	testGhostPacman('1');
+	testGhostPacman('3');
+	testGhostPacman('4');
+	testGhostPacman('2');
 
 }
 function testGhostPacman(ghost) {
@@ -317,7 +317,7 @@ function testBubblesPacman() {
 		var testY = parseInt(bubbleParams[0].split( "," )[1]);
 		var p = { x: testX, y: testY };
 
-		if ( isPointInRect( p, r ) ) {
+		if ( i0intInRect( p, r ) ) {
 
 			if ( bubbleParams[4] === "0" ) {
 				var type = bubbleParams[3];

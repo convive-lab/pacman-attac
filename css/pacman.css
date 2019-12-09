@@ -150,8 +150,8 @@ span.combo, span.fruits {
 	padding: 5px 10px 10px 10px;
 	background-color: #000;
 }
-#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-grune,
-#canvas-ghost-neos {
+#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-0, #canvas-ghost-1, #canvas-ghost-3, #canvas-ghost-4,
+#canvas-ghost-2 {
 	width: 550px;
 	height: 550px;
 	position: absolute;
@@ -601,8 +601,8 @@ span.box{
 		width: auto;
 		top: -25px;
 	}
-	#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-spo, #canvas-ghost-fpo, #canvas-ghost-ovp, #canvas-ghost-grune,
-	#canvas-ghost-neos {
+	#board, #canvas-board, #canvas-paths, #canvas-fruits, #canvas-pacman, #canvas-bubbles, #canvas-ghost-0, #canvas-ghost-1, #canvas-ghost-3, #canvas-ghost-4,
+	#canvas-ghost-2 {
 		width: 95vw;
 		height: 95vw;
 		position: absolute;

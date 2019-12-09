@@ -94,9 +94,9 @@ position: relative;
 	margin: auto;
 	padding: 0px;
 	width: 500px;
-	height: 250px;
+	height: 290px;
 	max-width: 100%;
-	margin-bottom: 280px;
+	margin-bottom: 310px;
 }
 #presentation-titles {
 	position: absolute;
@@ -109,39 +109,39 @@ position: relative;
 	text-transform: uppercase;
 	color: #fff;
 }
-#canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp,
-#canvas-presentation-grune,
-#canvas-presentation-neos  {
+#canvas-presentation-0, #canvas-presentation-1, #canvas-presentation-3,
+#canvas-presentation-4,
+#canvas-presentation-2  {
 	position: absolute;
 	width: 50px;
 	height: 50px;
 	left: 35px;
 }
-#canvas-presentation-spo {
+#canvas-presentation-0 {
 	top: 140px;
 }
-#canvas-presentation-fpo {
+#canvas-presentation-1 {
 	top: 90px;
 }
-#canvas-presentation-ovp {
+#canvas-presentation-3 {
 	top: 40px;
 }
-#canvas-presentation-grune {
-	top: 190px;
+#canvas-presentation-4 {
+	top: 210px;
 }
-#canvas-presentation-neos {
-	top: 240px;
+#canvas-presentation-2 {
+	top: 270px;
 }
-#presentation-character-spo,
-#presentation-character-fpo,
-#presentation-character-ovp,
-#presentation-character-grune,
-#presentation-character-neos,
-#presentation-name-spo,
-#presentation-name-fpo,
-#presentation-name-ovp,
-#presentation-name-grune,
-#presentation-name-neos {
+#presentation-character-0,
+#presentation-character-1,
+#presentation-character-3,
+#presentation-character-4,
+#presentation-character-2,
+#presentation-name-0,
+#presentation-name-1,
+#presentation-name-3,
+#presentation-name-4,
+#presentation-name-2 {
 	position: absolute;
 	width: 180px;
 	height: 28px;
@@ -150,32 +150,32 @@ position: relative;
 	font-size: 20px;
 	text-transform: uppercase;
 }
-#presentation-name-spo,
-#presentation-name-fpo,
-#presentation-name-ovp,
-#presentation-name-grune,
-#presentation-name-neos {
+#presentation-name-0,
+#presentation-name-1,
+#presentation-name-3,
+#presentation-name-4,
+#presentation-name-2 {
 	left: 310px;
 	width: 230px;
 }
-#presentation-character-spo, #presentation-name-spo {
+#presentation-character-0, #presentation-name-0 {
 	top: 150px;
 	color: #ed1b24;
 }
-#presentation-character-fpo, #presentation-name-fpo {
+#presentation-character-1, #presentation-name-1 {
 	top: 100px;
 	color: #005ca7;
 }
-#presentation-character-ovp, #presentation-name-ovp {
+#presentation-character-3, #presentation-name-3 {
 	top: 50px;
 	color: #61c2d0;
 }
-#presentation-character-grune, #presentation-name-grune {
-	top: 200px;
+#presentation-character-4, #presentation-name-4 {
+	top: 210px;
 	color: #67af27;
 }
-#presentation-character-neos, #presentation-name-neos {
-	top: 250px;
+#presentation-character-2, #presentation-name-2 {
+	top: 280px;
 	color: #eb4188;
 }
 
@@ -259,41 +259,41 @@ position: relative;
 	#presentation{
 		margin: 0px;
 	}
-	#canvas-presentation-spo, #canvas-presentation-fpo, #canvas-presentation-ovp, #canvas-presentation-grune, #canvas-presentation-neos {
+	#canvas-presentation-0, #canvas-presentation-1, #canvas-presentation-3, #canvas-presentation-4, #canvas-presentation-2 {
     position: absolute;
     width: 35px;
     height: 35px;
     left: 15px;
 	}
-	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-grune, #presentation-character-neos,
-	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-grune, #presentation-name-neos {
+	#presentation-character-0, #presentation-character-1, #presentation-character-3, #presentation-character-4, #presentation-character-2,
+	#presentation-name-0, #presentation-name-1, #presentation-name-3, #presentation-name-4, #presentation-name-2 {
 		font-size: 15px;
 	}
-	#presentation-character-spo, #presentation-character-fpo, #presentation-character-ovp, #presentation-character-grune, #presentation-character-neos
+	#presentation-character-0, #presentation-character-1, #presentation-character-3, #presentation-character-4, #presentation-character-2
 	{
 		left: 60px;
 	}
-	#presentation-character-ovp, #presentation-name-ovp {
+	#presentation-character-3, #presentation-name-3 {
 		top: 45px;
 		color: #61c2d0;
 	}
-	#presentation-character-fpo, #presentation-name-fpo {
+	#presentation-character-1, #presentation-name-1 {
 		top: 100px;
 		color: #005ca7;
 	}
-	#presentation-character-spo, #presentation-name-spo {
+	#presentation-character-0, #presentation-name-0 {
 		top: 150px;
 		color: #ed1b24;
 	}
-	#presentation-character-grune, #presentation-name-grune {
+	#presentation-character-4, #presentation-name-4 {
 		top: 200px;
 		color: #67af27;
 	}
-	#presentation-character-neos, #presentation-name-neos {
+	#presentation-character-2, #presentation-name-2 {
 		top: 250px;
 		color: #eb4188;
 	}
-	#presentation-name-spo, #presentation-name-fpo, #presentation-name-ovp, #presentation-name-grune, #presentation-name-neos {
+	#presentation-name-0, #presentation-name-1, #presentation-name-3, #presentation-name-4, #presentation-name-2 {
 		left: 159px;
 		width: 203px;
 	}

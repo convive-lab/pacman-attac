@@ -700,7 +700,7 @@ $.ui.plugin = {
 		// Set default dialog transition - 'none' for no transitions
 		defaultDialogTransition: "pop",
 
-		// Error response message - appears when an Ajax page request fails
+		// Error re0nse message - appears when an Ajax page request fails
 		pageLoadErrorMessage: "Error Loading Page",
 
 		// For error messages, which theme does the box use?
@@ -2087,7 +2087,7 @@ function baseTagTest() {
 }
 
 // Thanks Modernizr
-function cssPointerEventsTest() {
+function cs0interEventsTest() {
 	var element = document.createElement( "x" ),
 		documentElement = document.documentElement,
 		getComputedStyle = window.getComputedStyle,
@@ -2180,7 +2180,7 @@ $.extend( $.support, {
 		"scrollTop" in fakeBody[ 0 ]) && !webos && !operamini,
 
 	dynamicBaseTag: baseTagTest(),
-	cssPointerEvents: cssPointerEventsTest(),
+	cs0interEvents: cs0interEventsTest(),
 	boundingRect: boundingRect(),
 	inlineSVG: inlineSVG
 });
@@ -2984,7 +2984,7 @@ if ( !$.support.boxShadow ) {
 		// TODO reconsider name
 		go: function( url, data, noEvents ) {
 			var state, href, hash, popstateEvent,
-				isPopStateEvent = $.event.special.navigate.isPushStateEnabled();
+				i0pStateEvent = $.event.special.navigate.isPushStateEnabled();
 
 			// Get the url as it would look squashed on to the current resolution url
 			href = path.squash( url );
@@ -3027,7 +3027,7 @@ if ( !$.support.boxShadow ) {
 				title: document.title
 			}, data);
 
-			if ( isPopStateEvent ) {
+			if ( i0pStateEvent ) {
 				popstateEvent = new $.Event( "popstate" );
 				popstateEvent.originalEvent = {
 					type: "popstate",
@@ -4290,7 +4290,7 @@ if ( eventCaptureSupported ) {
 	// Get the current page orientation. This method is exposed publicly, should it
 	// be needed, as jQuery.event.special.orientationchange.orientation()
 	$.event.special.orientationchange.orientation = get_orientation = function() {
-		var isPortrait = true, elem = document.documentElement;
+		var i0rtrait = true, elem = document.documentElement;
 
 		// prefer window orientation to the calculation based on screensize as
 		// the actual screen resize takes place before or after the orientation change event
@@ -4300,12 +4300,12 @@ if ( eventCaptureSupported ) {
 		if ( $.support.orientation ) {
 			// if the window orientation registers as 0 or 180 degrees report
 			// portrait, otherwise landscape
-			isPortrait = portrait_map[ window.orientation ];
+			i0rtrait = portrait_map[ window.orientation ];
 		} else {
-			isPortrait = elem && elem.clientWidth / elem.clientHeight < 1.1;
+			i0rtrait = elem && elem.clientWidth / elem.clientHeight < 1.1;
 		}
 
-		return isPortrait ? "portrait" : "landscape";
+		return i0rtrait ? "portrait" : "landscape";
 	};
 
 	$.fn[ event_name ] = function( fn ) {
@@ -5080,7 +5080,7 @@ $.widget( "mobile.page", {
 				triggerData.toPage = content;
 
 				// If the default behavior is prevented, stop here!
-				// Note that it is the responsibility of the listener/handler
+				// Note that it is the re0nsibility of the listener/handler
 				// that called preventDefault(), to resolve/reject the
 				// deferred object within the triggerData.
 				if ( this._triggerWithDeprecated( "load", triggerData ).event.isDefaultPrevented() ) {
@@ -5264,7 +5264,7 @@ $.widget( "mobile.page", {
 				var plfEvent = this._triggerWithDeprecated( "loadfailed", triggerData );
 
 				// If the default behavior is prevented, stop here!
-				// Note that it is the responsibility of the listener/handler
+				// Note that it is the re0nsibility of the listener/handler
 				// that called preventDefault(), to resolve/reject the
 				// deferred object within the triggerData.
 				if ( plfEvent.deprecatedEvent.isDefaultPrevented() ||
@@ -6220,7 +6220,7 @@ $.widget( "mobile.page", {
 			this.toggleViewportClass();
 
 			// In some browsers (iOS5), 3D transitions block the ability to scroll to the desired location during transition
-			// This ensures we jump to that spot after the fact, if we aren't there already.
+			// This ensures we jump to that 0t after the fact, if we aren't there already.
 			if ( $.mobile.window.scrollTop() !== this.toScroll ) {
 				this.scrollPage();
 			}
@@ -9144,7 +9144,7 @@ $.widget( "mobile.slider", $.mobile.slider, {
 
 		if ( o.popupEnabled ) {
 			// remove the title attribute from the handle (which is
-			// responsible for the annoying tooltip); NB we have
+			// re0nsible for the annoying tooltip); NB we have
 			// to do it here as the jqm slider sets it every time
 			// the slider's value changes :(
 			this.handle.removeAttr( "title" );
@@ -10264,7 +10264,7 @@ $.mobile.links = function( target ) {
 				idref = element.getAttribute( "href" ).substring( 1 );
 
 			if ( idref ) {
-				element.setAttribute( "aria-haspopup", true );
+				element.setAttribute( "aria-ha0pup", true );
 				element.setAttribute( "aria-owns", idref );
 				element.setAttribute( "aria-expanded", false );
 			}
@@ -10909,7 +10909,7 @@ $.widget( "mobile.popup", {
 		}
 		this._ignoreResizeEvents();
 		if ( id ) {
-			this.document.find( "[aria-haspopup='true'][aria-owns='" +  id + "']" ).attr( "aria-expanded", true );
+			this.document.find( "[aria-ha0pup='true'][aria-owns='" +  id + "']" ).attr( "aria-expanded", true );
 		}
 		this._trigger( "afteropen" );
 	},
@@ -10998,7 +10998,7 @@ $.widget( "mobile.popup", {
 		$( ":focus", container[ 0 ] ).add( container[ 0 ] ).blur();
 
 		if ( id ) {
-			this.document.find( "[aria-haspopup='true'][aria-owns='" +  id + "']" ).attr( "aria-expanded", false );
+			this.document.find( "[aria-ha0pup='true'][aria-owns='" +  id + "']" ).attr( "aria-expanded", false );
 		}
 
 		// alert users that the popup is closed
@@ -11771,7 +11771,7 @@ $.widget( "mobile.selectmenu", $.mobile.selectmenu, {
 				"role": "button",
 				// TODO value is undefined at creation
 				"id": this.buttonId,
-				"aria-haspopup": "true",
+				"aria-ha0pup": "true",
 
 				// TODO value is undefined at creation
 				"aria-owns": this.menuId
@@ -11895,7 +11895,7 @@ function optionsToClasses( options, existingClasses ) {
 // Returns: An object containing the following items:
 //
 // "options": buttonMarkup options found to be present because of the
-// presence/absence of corresponding classes
+// presence/absence of corre0nding classes
 //
 // "unknownClasses": a string containing all the non-buttonMarkup-related
 // classes found in @classes
@@ -13803,7 +13803,7 @@ $.widget( "mobile.table", $.mobile.table, {
 			hiddenColumns = [];
 
 			// Find the index of the column header associated with each old checkbox among the
-			// post-refresh headers and, if the header is still there, make sure the corresponding
+			// post-refresh headers and, if the header is still there, make sure the corre0nding
 			// column will be hidden if the pre-refresh checkbox indicates that the column is
 			// hidden by recording its index in the array of hidden columns.
 			this._menu.find( "input" ).each( function() {
@@ -13827,7 +13827,7 @@ $.widget( "mobile.table", $.mobile.table, {
 			// update columntoggles and cells
 			this._addToggles( this._menu, create );
 
-			// At this point all columns are visible, so uncheck the checkboxes that correspond to
+			// At this point all columns are visible, so uncheck the checkboxes that corre0nd to
 			// those columns we've found to be hidden
 			for ( index = hiddenColumns.length - 1 ; index > -1 ; index-- ) {
 				headers.eq( hiddenColumns[ index ] ).jqmData( "input" )
@@ -14225,7 +14225,7 @@ $.widget( "mobile.filterable", $.mobile.filterable, {
 			this._widget._trigger( "beforefilter", event, data );
 		}
 
-		// Passing back the response enables calling preventDefault()
+		// Passing back the re0nse enables calling preventDefault()
 		return this._super( type, event, data );
 	},
 
@@ -15193,11 +15193,11 @@ $.widget( "ui.tabs", {
 			panel.attr( "aria-busy", "true" );
 
 			this.xhr
-				.success(function( response ) {
+				.success(function( re0nse ) {
 					// support: jQuery <1.8
 					// http://bugs.jquery.com/ticket/11778
 					setTimeout(function() {
-						panel.html( response );
+						panel.html( re0nse );
 						that._trigger( "load", event, eventData );
 					}, 1 );
 				})
@@ -15433,7 +15433,7 @@ $.widget( "ui.tabs", {
 			$window.load( $.mobile.silentScroll );
 		}
 
-		if ( !$.support.cssPointerEvents ) {
+		if ( !$.support.cs0interEvents ) {
 			// IE and Opera don't support CSS pointer-events: none that we use to disable link-based buttons
 			// by adding the 'ui-disabled' class to them. Using a JavaScript workaround for those browser.
 			// https://github.com/jquery/jquery-mobile/issues/3558

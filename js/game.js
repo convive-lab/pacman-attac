@@ -381,7 +381,7 @@ function score(s, type) {
 		}
 	}
 
-	if (type && (type === "grune" || type === "fpo" || type === "ovp" || type === "spo" || type === "neos") ) {
+	if (type && (type === "4" || type === "1" || type === "3" || type === "0" || type === "2") ) {
 		erasePacman();
 		eraseGhost(type);
 		$("#board").append('<span class="combo">' + SCORE_GHOST_COMBO + '</span>');

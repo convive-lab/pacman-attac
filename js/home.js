@@ -19,40 +19,40 @@ var GHOST_TRAILER_CANVAS_CONTEXT = null;
 var GHOST_TRAILER_BODY_STATE_MAX = 8;
 var GHOST_TRAILER_POSITION_STEP = 3;
 
-var GHOST_SPO_TRAILER_POSITION_X = 1000;
-var GHOST_SPO_TRAILER_POSITION_Y = 25;
-var GHOST_SPO_TRAILER_DIRECTION = 3;
-var GHOST_SPO_TRAILER_COLOR = "#ed1b24";
-var GHOST_SPO_TRAILER_BODY_STATE = 0;
-var GHOST_SPO_TRAILER_STATE = 0;
+var GHOST_1_TRAILER_POSITION_X = 1000;
+var GHOST_1_TRAILER_POSITION_Y = 25;
+var GHOST_1_TRAILER_DIRECTION = 3;
+var GHOST_1_TRAILER_COLOR = "#ed1b24";
+var GHOST_1_TRAILER_BODY_STATE = 0;
+var GHOST_1_TRAILER_STATE = 0;
 
-var GHOST_FPO_TRAILER_POSITION_X = 1035;
-var GHOST_FPO_TRAILER_POSITION_Y = 25;
-var GHOST_FPO_TRAILER_DIRECTION = 3;
-var GHOST_FPO_TRAILER_COLOR = "#feaec9";
-var GHOST_FPO_TRAILER_BODY_STATE = 1;
-var GHOST_FPO_TRAILER_STATE = 0;
+var GHOST_2_TRAILER_POSITION_X = 1035;
+var GHOST_2_TRAILER_POSITION_Y = 25;
+var GHOST_2_TRAILER_DIRECTION = 3;
+var GHOST_2_TRAILER_COLOR = "#feaec9";
+var GHOST_2_TRAILER_BODY_STATE = 1;
+var GHOST_2_TRAILER_STATE = 0;
 
-var GHOST_OVP_TRAILER_POSITION_X = 1070;
-var GHOST_OVP_TRAILER_POSITION_Y = 25;
-var GHOST_OVP_TRAILER_DIRECTION = 3;
-var GHOST_OVP_TRAILER_COLOR = "#4adecb";
-var GHOST_OVP_TRAILER_BODY_STATE = 2;
-var GHOST_OVP_TRAILER_STATE = 0;
+var GHOST_3_TRAILER_POSITION_X = 1070;
+var GHOST_3_TRAILER_POSITION_Y = 25;
+var GHOST_3_TRAILER_DIRECTION = 3;
+var GHOST_3_TRAILER_COLOR = "#4adecb";
+var GHOST_3_TRAILER_BODY_STATE = 2;
+var GHOST_3_TRAILER_STATE = 0;
 
-var GHOST_GRUNE_TRAILER_POSITION_X = 1105;
-var GHOST_GRUNE_TRAILER_POSITION_Y = 25;
-var GHOST_GRUNE_TRAILER_DIRECTION = 3;
-var GHOST_GRUNE_TRAILER_COLOR = "#f99c00";
-var GHOST_GRUNE_TRAILER_BODY_STATE = 3;
-var GHOST_GRUNE_TRAILER_STATE = 0;
+var GHOST_4_TRAILER_POSITION_X = 1105;
+var GHOST_4_TRAILER_POSITION_Y = 25;
+var GHOST_4_TRAILER_DIRECTION = 3;
+var GHOST_4_TRAILER_COLOR = "#f99c00";
+var GHOST_4_TRAILER_BODY_STATE = 3;
+var GHOST_4_TRAILER_STATE = 0;
 
-var GHOST_NEOS_TRAILER_POSITION_X = 1140;
-var GHOST_NEOS_TRAILER_POSITION_Y = 25;
-var GHOST_NEOS_TRAILER_DIRECTION = 3;
-var GHOST_NEOS_TRAILER_COLOR = "#eb4188";
-var GHOST_NEOS_TRAILER_BODY_STATE = 4;
-var GHOST_NEOS_TRAILER_STATE = 0;
+var GHOST_0_TRAILER_POSITION_X = 1140;
+var GHOST_0_TRAILER_POSITION_Y = 25;
+var GHOST_0_TRAILER_DIRECTION = 3;
+var GHOST_0_TRAILER_COLOR = "#eb4188";
+var GHOST_0_TRAILER_BODY_STATE = 4;
+var GHOST_0_TRAILER_STATE = 0;
 
 function initHome() {
 	HOME = true;
@@ -96,49 +96,49 @@ function initHome() {
 	ctx.fill();
 	ctx.closePath();
 
-	canvas = document.getElementById('canvas-presentation-spo');
+	canvas = document.getElementById('canvas-presentation-0');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_SPO_COLOR;
+	ctx.fillStyle = GHOST_1_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
-	canvas = document.getElementById('canvas-presentation-fpo');
+	canvas = document.getElementById('canvas-presentation-1');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_FPO_COLOR;
+	ctx.fillStyle = GHOST_2_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
-	canvas = document.getElementById('canvas-presentation-ovp');
+	canvas = document.getElementById('canvas-presentation-3');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_OVP_COLOR;
+	ctx.fillStyle = GHOST_3_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
-	canvas = document.getElementById('canvas-presentation-grune');
+	canvas = document.getElementById('canvas-presentation-4');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_GRUNE_COLOR;
+	ctx.fillStyle = GHOST_4_COLOR;
 
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	canvas = document.getElementById('canvas-presentation-neos');
+	canvas = document.getElementById('canvas-presentation-2');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_NEOS_COLOR;
+	ctx.fillStyle = GHOST_0_COLOR;
 	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
 	startPresentation();
@@ -165,35 +165,35 @@ function nextSequencePresentation() {
 	if (HOME_PRESENTATION_STATE === 0) {
 		$("#presentation-titles").show();
 	} else if (HOME_PRESENTATION_STATE === 2) {
-		$("#canvas-presentation-ovp").show();
+		$("#canvas-presentation-3").show();
 	} else if (HOME_PRESENTATION_STATE === 4) {
-		$("#presentation-character-ovp").show();
+		$("#presentation-character-3").show();
 	} else if (HOME_PRESENTATION_STATE === 5) {
-		$("#presentation-name-ovp").show();
+		$("#presentation-name-3").show();
 	} else if (HOME_PRESENTATION_STATE === 6) {
-		$("#canvas-presentation-fpo").show();
+		$("#canvas-presentation-1").show();
 	} else if (HOME_PRESENTATION_STATE === 8) {
-		$("#presentation-character-fpo").show();
+		$("#presentation-character-1").show();
 	} else if (HOME_PRESENTATION_STATE === 9) {
-		$("#presentation-name-fpo").show();
+		$("#presentation-name-1").show();
 	} else if (HOME_PRESENTATION_STATE === 10) {
-		$("#canvas-presentation-spo").show();
+		$("#canvas-presentation-0").show();
 	} else if (HOME_PRESENTATION_STATE === 12) {
-		$("#presentation-character-spo").show();
+		$("#presentation-character-0").show();
 	} else if (HOME_PRESENTATION_STATE === 13) {
-		$("#presentation-name-spo").show();
+		$("#presentation-name-0").show();
 	} else if (HOME_PRESENTATION_STATE === 14) {
-		$("#canvas-presentation-grune").show();
+		$("#canvas-presentation-4").show();
 	} else if (HOME_PRESENTATION_STATE === 16) {
-		$("#presentation-character-grune").show();
+		$("#presentation-character-4").show();
 	} else if (HOME_PRESENTATION_STATE === 17) {
-		$("#presentation-name-grune").show();
+		$("#presentation-name-4").show();
 	} else if (HOME_PRESENTATION_STATE === 18) {
-		$("#canvas-presentation-neos").show();
+		$("#canvas-presentation-2").show();
 	} else if (HOME_PRESENTATION_STATE === 19) {
-		$("#presentation-character-neos").show();
+		$("#presentation-character-2").show();
 	} else if (HOME_PRESENTATION_STATE === 20) {
-		$("#presentation-name-neos").show();
+		$("#presentation-name-2").show();
 	}
 
 
@@ -250,75 +250,75 @@ function nextSequenceTrailer() {
 		PACMAN_TRAILER_POSITION_STEP ++;
 	}
 
-	if (GHOST_SPO_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
-		GHOST_SPO_TRAILER_BODY_STATE ++;
+	if (GHOST_1_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_1_TRAILER_BODY_STATE ++;
 	} else {
-		GHOST_SPO_TRAILER_BODY_STATE = 0;
+		GHOST_1_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_FPO_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
-		GHOST_FPO_TRAILER_BODY_STATE ++;
+	if (GHOST_2_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_2_TRAILER_BODY_STATE ++;
 	} else {
-		GHOST_FPO_TRAILER_BODY_STATE = 0;
+		GHOST_2_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_OVP_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
-		GHOST_OVP_TRAILER_BODY_STATE ++;
+	if (GHOST_3_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_3_TRAILER_BODY_STATE ++;
 	} else {
-		GHOST_OVP_TRAILER_BODY_STATE = 0;
+		GHOST_3_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_GRUNE_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
-		GHOST_GRUNE_TRAILER_BODY_STATE ++;
+	if (GHOST_4_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_4_TRAILER_BODY_STATE ++;
 	} else {
-		GHOST_GRUNE_TRAILER_BODY_STATE = 0;
+		GHOST_4_TRAILER_BODY_STATE = 0;
 	}
-	if (GHOST_NEOS_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
-		GHOST_NEOS_TRAILER_BODY_STATE ++;
+	if (GHOST_0_TRAILER_BODY_STATE < GHOST_TRAILER_BODY_STATE_MAX) {
+		GHOST_0_TRAILER_BODY_STATE ++;
 	} else {
-		GHOST_NEOS_TRAILER_BODY_STATE = 0;
+		GHOST_0_TRAILER_BODY_STATE = 0;
 	}
-	if ( GHOST_SPO_TRAILER_DIRECTION === 1 ) {
-		GHOST_SPO_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_SPO_TRAILER_DIRECTION === 3 ) {
-		GHOST_SPO_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_1_TRAILER_DIRECTION === 1 ) {
+		GHOST_1_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_1_TRAILER_DIRECTION === 3 ) {
+		GHOST_1_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_FPO_TRAILER_DIRECTION === 1 ) {
-		GHOST_FPO_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_FPO_TRAILER_DIRECTION === 3 ) {
-		GHOST_FPO_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_2_TRAILER_DIRECTION === 1 ) {
+		GHOST_2_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_2_TRAILER_DIRECTION === 3 ) {
+		GHOST_2_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_OVP_TRAILER_DIRECTION === 1 ) {
-		GHOST_OVP_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_OVP_TRAILER_DIRECTION === 3 ) {
-		GHOST_OVP_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_3_TRAILER_DIRECTION === 1 ) {
+		GHOST_3_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_3_TRAILER_DIRECTION === 3 ) {
+		GHOST_3_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_GRUNE_TRAILER_DIRECTION === 1 ) {
-		GHOST_GRUNE_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_GRUNE_TRAILER_DIRECTION === 3 ) {
-		GHOST_GRUNE_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_4_TRAILER_DIRECTION === 1 ) {
+		GHOST_4_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_4_TRAILER_DIRECTION === 3 ) {
+		GHOST_4_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_NEOS_TRAILER_DIRECTION === 1 ) {
-		GHOST_NEOS_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
-	} else if ( GHOST_NEOS_TRAILER_DIRECTION === 3 ) {
-		GHOST_NEOS_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
+	if ( GHOST_0_TRAILER_DIRECTION === 1 ) {
+		GHOST_0_TRAILER_POSITION_X += GHOST_TRAILER_POSITION_STEP;
+	} else if ( GHOST_0_TRAILER_DIRECTION === 3 ) {
+		GHOST_0_TRAILER_POSITION_X -= GHOST_TRAILER_POSITION_STEP;
 	}
-	if ( GHOST_SPO_TRAILER_POSITION_X < -255) {
-		GHOST_SPO_TRAILER_DIRECTION = 1;
-		GHOST_SPO_TRAILER_STATE = 1;
+	if ( GHOST_1_TRAILER_POSITION_X < -255) {
+		GHOST_1_TRAILER_DIRECTION = 1;
+		GHOST_1_TRAILER_STATE = 1;
 	}
-	if ( GHOST_FPO_TRAILER_POSITION_X < -220) {
-		GHOST_FPO_TRAILER_DIRECTION = 1;
-		GHOST_FPO_TRAILER_STATE = 1;
+	if ( GHOST_2_TRAILER_POSITION_X < -220) {
+		GHOST_2_TRAILER_DIRECTION = 1;
+		GHOST_2_TRAILER_STATE = 1;
 	}
-	if ( GHOST_OVP_TRAILER_POSITION_X < -185) {
-		GHOST_OVP_TRAILER_DIRECTION = 1;
-		GHOST_OVP_TRAILER_STATE = 1;
+	if ( GHOST_3_TRAILER_POSITION_X < -185) {
+		GHOST_3_TRAILER_DIRECTION = 1;
+		GHOST_3_TRAILER_STATE = 1;
 	}
-	if ( GHOST_GRUNE_TRAILER_POSITION_X < -150) {
-		GHOST_GRUNE_TRAILER_DIRECTION = 1;
-		GHOST_GRUNE_TRAILER_STATE = 1;
+	if ( GHOST_4_TRAILER_POSITION_X < -150) {
+		GHOST_4_TRAILER_DIRECTION = 1;
+		GHOST_4_TRAILER_STATE = 1;
 	}
-	if ( GHOST_NEOS_TRAILER_POSITION_X < -280) {
-		GHOST_NEOS_TRAILER_DIRECTION = 1;
-		GHOST_NEOS_TRAILER_STATE = 1;
+	if ( GHOST_0_TRAILER_POSITION_X < -280) {
+		GHOST_0_TRAILER_DIRECTION = 1;
+		GHOST_0_TRAILER_STATE = 1;
 	}
 	drawPacmanTrailer();
 	drawGhostsTrailer();
@@ -337,50 +337,50 @@ function getGhostsTrailerCanevasContext() {
 function drawGhostsTrailer() {
 	var ctx = getGhostsTrailerCanevasContext();
 
-	if (GHOST_SPO_TRAILER_STATE === 1) {
+	if (GHOST_1_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
 	} else {
-		ctx.fillStyle = GHOST_SPO_COLOR;
+		ctx.fillStyle = GHOST_1_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_SPO_TRAILER_POSITION_X, GHOST_SPO_TRAILER_POSITION_Y, GHOST_SPO_TRAILER_DIRECTION, GHOST_SPO_TRAILER_BODY_STATE, GHOST_SPO_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_1_TRAILER_POSITION_X, GHOST_1_TRAILER_POSITION_Y, GHOST_1_TRAILER_DIRECTION, GHOST_1_TRAILER_BODY_STATE, GHOST_1_TRAILER_STATE, 0);
 
-	if (GHOST_FPO_TRAILER_STATE === 1) {
+	if (GHOST_2_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
 	} else {
-		ctx.fillStyle = GHOST_FPO_COLOR;
+		ctx.fillStyle = GHOST_2_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_FPO_TRAILER_POSITION_X, GHOST_FPO_TRAILER_POSITION_Y, GHOST_FPO_TRAILER_DIRECTION, GHOST_FPO_TRAILER_BODY_STATE, GHOST_FPO_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_2_TRAILER_POSITION_X, GHOST_2_TRAILER_POSITION_Y, GHOST_2_TRAILER_DIRECTION, GHOST_2_TRAILER_BODY_STATE, GHOST_2_TRAILER_STATE, 0);
 
-	if (GHOST_OVP_TRAILER_STATE === 1) {
+	if (GHOST_3_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
 	} else {
-		ctx.fillStyle = GHOST_OVP_COLOR;
+		ctx.fillStyle = GHOST_3_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_OVP_TRAILER_POSITION_X, GHOST_OVP_TRAILER_POSITION_Y, GHOST_OVP_TRAILER_DIRECTION, GHOST_OVP_TRAILER_BODY_STATE, GHOST_OVP_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_3_TRAILER_POSITION_X, GHOST_3_TRAILER_POSITION_Y, GHOST_3_TRAILER_DIRECTION, GHOST_3_TRAILER_BODY_STATE, GHOST_3_TRAILER_STATE, 0);
 
-	if (GHOST_GRUNE_TRAILER_STATE === 1) {
+	if (GHOST_4_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
 	} else {
-		ctx.fillStyle = GHOST_GRUNE_COLOR;
+		ctx.fillStyle = GHOST_4_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_GRUNE_TRAILER_POSITION_X, GHOST_GRUNE_TRAILER_POSITION_Y, GHOST_GRUNE_TRAILER_DIRECTION, GHOST_GRUNE_TRAILER_BODY_STATE, GHOST_GRUNE_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_4_TRAILER_POSITION_X, GHOST_4_TRAILER_POSITION_Y, GHOST_4_TRAILER_DIRECTION, GHOST_4_TRAILER_BODY_STATE, GHOST_4_TRAILER_STATE, 0);
 
-	if (GHOST_NEOS_TRAILER_STATE === 1) {
+	if (GHOST_0_TRAILER_STATE === 1) {
 		ctx.fillStyle = GHOST_AFFRAID_COLOR;
 	} else {
-		ctx.fillStyle = GHOST_NEOS_COLOR;
+		ctx.fillStyle = GHOST_0_COLOR;
 	}
-	drawHelperGhost(ctx, GHOST_NEOS_TRAILER_POSITION_X, GHOST_NEOS_TRAILER_POSITION_Y, GHOST_NEOS_TRAILER_DIRECTION, GHOST_NEOS_TRAILER_BODY_STATE, GHOST_NEOS_TRAILER_STATE, 0);
+	drawHelperGhost(ctx, GHOST_0_TRAILER_POSITION_X, GHOST_0_TRAILER_POSITION_Y, GHOST_0_TRAILER_DIRECTION, GHOST_0_TRAILER_BODY_STATE, GHOST_0_TRAILER_STATE, 0);
 }
 function eraseGhostsTrailer(ghost) {
 
 	var ctx = getGhostsTrailerCanevasContext();
 
-	ctx.clearRect(GHOST_SPO_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_FPO_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_OVP_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_GRUNE_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
-	ctx.clearRect(GHOST_NEOS_TRAILER_POSITION_X - 17, GHOST_SPO_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_1_TRAILER_POSITION_X - 17, GHOST_1_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_2_TRAILER_POSITION_X - 17, GHOST_1_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_3_TRAILER_POSITION_X - 17, GHOST_1_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_4_TRAILER_POSITION_X - 17, GHOST_1_TRAILER_POSITION_Y - 17, 34, 34);
+	ctx.clearRect(GHOST_0_TRAILER_POSITION_X - 17, GHOST_1_TRAILER_POSITION_Y - 17, 34, 34);
 }
 
 function getPacmanTrailerCanevasContext() {

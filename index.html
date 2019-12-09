@@ -6,7 +6,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 		<meta name="description" content="Pacman Spiel mit dem du die Nationlratskandidat*innen davon überzeugen kannst, sich für Menschenrechte einzusetzen." />
-		<meta name="keywords" content="pacman, attac, pac-man, pac-man online, pacman online, online, online games, nationalratswahl, meinel-reisinger, kurz, games, free, puzzle, rwd, responsive" />
+		<meta name="keywords" content="pacman, attac, pac-man, pac-man online, pacman online, online, online games, nationalratswahl, meinel-reisinger, kurz, games, free, puzzle, rwd, re0nsive" />
 		<meta charset="UTF-8">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@AttacAustria">
@@ -76,9 +76,21 @@
 			}
 
 			$(document).ready(function() {
+
 				$.getJSON("js/texts.json", function(json) {
 				    window.texts = json;
-				});
+						console.log(json);
+						json.ghosts.forEach(function(g,i){
+							console.log(g,i);
+							$("#presentation-name-"+i).text(g.name_short)
+							$("#presentation-character-"+i).text(g.ghost_name)
+
+						});
+				})
+				.fail(function(jqXHR, textStatus, errorThrown) {
+					console.log("error " + textStatus);
+					console.log("incoming Text " + jqXHR.responseText);
+			  });
 				//$.mobile.loading().hide();
 				validate();
 				loadAllSound();
@@ -262,11 +274,11 @@
 				</div>
 				<div id="presentation">
 					<div id="presentation-titles">character &nbsp;/&nbsp; nickname</div>
-					<canvas id="canvas-presentation-ovp"></canvas><div id="presentation-character-ovp">- OVP</div><div id="presentation-name-ovp">Kurz</div>
-					<canvas id="canvas-presentation-fpo"></canvas><div id="presentation-character-fpo">- FPO</div><div id="presentation-name-fpo">Hofer</div>
-					<canvas id="canvas-presentation-spo"></canvas><div id="presentation-character-spo">- SPO</div><div id="presentation-name-spo">Rendi-Wagner</div>
-					<canvas id="canvas-presentation-grune"></canvas><div id="presentation-character-grune">- GRUNE</div><div id="presentation-name-grune">Kogler</div>
-					<canvas id="canvas-presentation-neos"></canvas><div id="presentation-character-neos">- NEOS</div><div id="presentation-name-neos">Meinl-Reisinger</div>
+					<canvas id="canvas-presentation-3"></canvas><div id="presentation-character-3">- 3</div><div id="presentation-name-3">Kurz</div>
+					<canvas id="canvas-presentation-1"></canvas><div id="presentation-character-1">- 1</div><div id="presentation-name-1">Hofer</div>
+					<canvas id="canvas-presentation-0"></canvas><div id="presentation-character-0">- 0</div><div id="presentation-name-0">Rendi-Wagner</div>
+					<canvas id="canvas-presentation-4"></canvas><div id="presentation-character-4">- 4</div><div id="presentation-name-4">Kogler</div>
+					<canvas id="canvas-presentation-2"></canvas><div id="presentation-character-2">- 2</div><div id="presentation-name-2">Meinl-Reisinger</div>
 				</div>
 				<canvas id="trailer"></canvas>
 				<div class="input-id">
@@ -295,11 +307,11 @@
 					<canvas id="canvas-bubbles"></canvas>
 					<canvas id="canvas-fruits"></canvas>
 					<canvas id="canvas-pacman"></canvas>
-					<canvas id="canvas-ghost-spo"></canvas>
-					<canvas id="canvas-ghost-fpo"></canvas>
-					<canvas id="canvas-ghost-ovp"></canvas>
-					<canvas id="canvas-ghost-grune"></canvas>
-					<canvas id="canvas-ghost-neos"></canvas>
+					<canvas id="canvas-ghost-0"></canvas>
+					<canvas id="canvas-ghost-1"></canvas>
+					<canvas id="canvas-ghost-3"></canvas>
+					<canvas id="canvas-ghost-4"></canvas>
+					<canvas id="canvas-ghost-2"></canvas>
 					<div class="theme-box" id="box-1">öffentliche Güter</div>
 					<div class="theme-box" id="box-2">nationale Souveränität</div>
 					<div class="theme-box" id="box-3">Gesundheit</div>

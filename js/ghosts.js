@@ -1,72 +1,72 @@
-var GHOST_SPO_CANVAS_CONTEXT = null;
-var GHOST_SPO_POSITION_X = 238;
-var GHOST_SPO_POSITION_Y = 258;
-var GHOST_SPO_DIRECTION = 3;
-var GHOST_SPO_COLOR = "#ed1b24";
-var GHOST_SPO_MOVING_TIMER = -1;
-var GHOST_SPO_MOVING = false;
-var GHOST_SPO_BODY_STATE = 0;
-var GHOST_SPO_STATE = 0;
-var GHOST_SPO_EAT_TIMER = null;
-var GHOST_SPO_AFFRAID_TIMER = null;
-var GHOST_SPO_AFFRAID_STATE = 0;
-var GHOST_SPO_TUNNEL = false;
+var GHOST_1_CANVAS_CONTEXT = null;
+var GHOST_1_POSITION_X = 238;
+var GHOST_1_POSITION_Y = 258;
+var GHOST_1_DIRECTION = 3;
+var GHOST_1_COLOR = "#ed1b24";
+var GHOST_1_MOVING_TIMER = -1;
+var GHOST_1_MOVING = false;
+var GHOST_1_BODY_STATE = 0;
+var GHOST_1_STATE = 0;
+var GHOST_1_EAT_TIMER = null;
+var GHOST_1_AFFRAID_TIMER = null;
+var GHOST_1_AFFRAID_STATE = 0;
+var GHOST_1_TUNNEL = false;
 
-var GHOST_FPO_CANVAS_CONTEXT = null;
-var GHOST_FPO_POSITION_X = 276;
-var GHOST_FPO_POSITION_Y = 258;
-var GHOST_FPO_DIRECTION = 2;
-var GHOST_FPO_COLOR = "#005ca7";
-var GHOST_FPO_MOVING_TIMER = -1;
-var GHOST_FPO_MOVING = false;
-var GHOST_FPO_BODY_STATE = 1;
-var GHOST_FPO_STATE = 0;
-var GHOST_FPO_EAT_TIMER = null;
-var GHOST_FPO_AFFRAID_TIMER = null;
-var GHOST_FPO_AFFRAID_STATE = 0;
-var GHOST_FPO_TUNNEL = false;
+var GHOST_2_CANVAS_CONTEXT = null;
+var GHOST_2_POSITION_X = 276;
+var GHOST_2_POSITION_Y = 258;
+var GHOST_2_DIRECTION = 2;
+var GHOST_2_COLOR = "#005ca7";
+var GHOST_2_MOVING_TIMER = -1;
+var GHOST_2_MOVING = false;
+var GHOST_2_BODY_STATE = 1;
+var GHOST_2_STATE = 0;
+var GHOST_2_EAT_TIMER = null;
+var GHOST_2_AFFRAID_TIMER = null;
+var GHOST_2_AFFRAID_STATE = 0;
+var GHOST_2_TUNNEL = false;
 
-var GHOST_OVP_CANVAS_CONTEXT = null;
-var GHOST_OVP_POSITION_X = 276;
-var GHOST_OVP_POSITION_Y = 204;
-var GHOST_OVP_DIRECTION = 1;
-var GHOST_OVP_COLOR = "#61c2d0";
-var GHOST_OVP_MOVING_TIMER = -1;
-var GHOST_OVP_MOVING = false;
-var GHOST_OVP_BODY_STATE = 2;
-var GHOST_OVP_STATE = 0;
-var GHOST_OVP_EAT_TIMER = null;
-var GHOST_OVP_AFFRAID_TIMER = null;
-var GHOST_OVP_AFFRAID_STATE = 0;
-var GHOST_OVP_TUNNEL = false;
+var GHOST_3_CANVAS_CONTEXT = null;
+var GHOST_3_POSITION_X = 276;
+var GHOST_3_POSITION_Y = 204;
+var GHOST_3_DIRECTION = 1;
+var GHOST_3_COLOR = "#61c2d0";
+var GHOST_3_MOVING_TIMER = -1;
+var GHOST_3_MOVING = false;
+var GHOST_3_BODY_STATE = 2;
+var GHOST_3_STATE = 0;
+var GHOST_3_EAT_TIMER = null;
+var GHOST_3_AFFRAID_TIMER = null;
+var GHOST_3_AFFRAID_STATE = 0;
+var GHOST_3_TUNNEL = false;
 
-var GHOST_GRUNE_CANVAS_CONTEXT = null;
-var GHOST_GRUNE_POSITION_X = 314;
-var GHOST_GRUNE_POSITION_Y = 258;
-var GHOST_GRUNE_DIRECTION = 4;
-var GHOST_GRUNE_COLOR = "#67af27";
-var GHOST_GRUNE_MOVING_TIMER = -1;
-var GHOST_GRUNE_MOVING = false;
-var GHOST_GRUNE_BODY_STATE = 3;
-var GHOST_GRUNE_STATE = 0;
-var GHOST_GRUNE_EAT_TIMER = null;
-var GHOST_GRUNE_AFFRAID_TIMER = null;
-var GHOST_GRUNE_AFFRAID_STATE = 0;
-var GHOST_GRUNE_TUNNEL = false;
+var GHOST_4_CANVAS_CONTEXT = null;
+var GHOST_4_POSITION_X = 314;
+var GHOST_4_POSITION_Y = 258;
+var GHOST_4_DIRECTION = 4;
+var GHOST_4_COLOR = "#67af27";
+var GHOST_4_MOVING_TIMER = -1;
+var GHOST_4_MOVING = false;
+var GHOST_4_BODY_STATE = 3;
+var GHOST_4_STATE = 0;
+var GHOST_4_EAT_TIMER = null;
+var GHOST_4_AFFRAID_TIMER = null;
+var GHOST_4_AFFRAID_STATE = 0;
+var GHOST_4_TUNNEL = false;
 
-var GHOST_NEOS_CANVAS_CONTEXT = null;
-var GHOST_NEOS_POSITION_X = 276;
-var GHOST_NEOS_POSITION_Y = 258;
-var GHOST_NEOS_DIRECTION = 5;
-var GHOST_NEOS_COLOR = "#eb4188";
-var GHOST_NEOS_MOVING_TIMER = -1;
-var GHOST_NEOS_MOVING = false;
-var GHOST_NEOS_BODY_STATE = 4;
-var GHOST_NEOS_STATE = 0;
-var GHOST_NEOS_EAT_TIMER = null;
-var GHOST_NEOS_AFFRAID_TIMER = null;
-var GHOST_NEOS_AFFRAID_STATE = 0;
-var GHOST_NEOS_TUNNEL = false;
+var GHOST_0_CANVAS_CONTEXT = null;
+var GHOST_0_POSITION_X = 276;
+var GHOST_0_POSITION_Y = 258;
+var GHOST_0_DIRECTION = 5;
+var GHOST_0_COLOR = "#eb4188";
+var GHOST_0_MOVING_TIMER = -1;
+var GHOST_0_MOVING = false;
+var GHOST_0_BODY_STATE = 4;
+var GHOST_0_STATE = 0;
+var GHOST_0_EAT_TIMER = null;
+var GHOST_0_AFFRAID_TIMER = null;
+var GHOST_0_AFFRAID_STATE = 0;
+var GHOST_0_TUNNEL = false;
 
 var GHOST_AFFRAID_COLOR = "#2d3eff21";
 var GHOST_AFFRAID_FINISH_COLOR = "#fff";
@@ -79,14 +79,13 @@ var GHOST_AFFRAID_TIME = 8500;
 var GHOST_EAT_TIME = 5500;
 var GHOST_BODY_STATE_MAX = 6;
 function initGhosts() {
-	initGhost('spo');
-	initGhost('fpo');
-	initGhost('ovp');
-	initGhost('grune');
-	initGhost('neos');
+	initGhost('0');
+	initGhost('1');
+	initGhost('2');
+	initGhost('3');
+	initGhost('4');
 }
 function initGhost(ghost) {
-	console.log(ghost);
 	var canvas = document.getElementById('canvas-ghost-' + ghost);
 	canvas.setAttribute('width', '550');
 	canvas.setAttribute('height', '550');
@@ -97,72 +96,72 @@ function initGhost(ghost) {
 function resetGhosts() {
 	stopGhosts();
 
-	GHOST_SPO_POSITION_X = 276;
-	GHOST_SPO_POSITION_Y = 204;
-	GHOST_SPO_DIRECTION = 1;
-	GHOST_SPO_MOVING_TIMER = -1;
-	GHOST_SPO_MOVING = false;
-	GHOST_SPO_BODY_STATE = 0;
-	GHOST_SPO_STATE = 0;
-	GHOST_SPO_EAT_TIMER = null;
-	GHOST_SPO_AFFRAID_TIMER = null;
-	GHOST_SPO_AFFRAID_STATE = 0;
+	GHOST_1_POSITION_X = 276;
+	GHOST_1_POSITION_Y = 204;
+	GHOST_1_DIRECTION = 1;
+	GHOST_1_MOVING_TIMER = -1;
+	GHOST_1_MOVING = false;
+	GHOST_1_BODY_STATE = 0;
+	GHOST_1_STATE = 0;
+	GHOST_1_EAT_TIMER = null;
+	GHOST_1_AFFRAID_TIMER = null;
+	GHOST_1_AFFRAID_STATE = 0;
 
-	GHOST_FPO_POSITION_X = 276;
-	GHOST_FPO_POSITION_Y = 258;
-	GHOST_FPO_DIRECTION = 2;
-	GHOST_FPO_MOVING_TIMER = -1;
-	GHOST_FPO_MOVING = false;
-	GHOST_FPO_BODY_STATE = 1;
-	GHOST_FPO_STATE = 0;
-	GHOST_FPO_EAT_TIMER = null;
-	GHOST_FPO_AFFRAID_TIMER = null;
-	GHOST_FPO_AFFRAID_STATE = 0;
+	GHOST_2_POSITION_X = 276;
+	GHOST_2_POSITION_Y = 258;
+	GHOST_2_DIRECTION = 2;
+	GHOST_2_MOVING_TIMER = -1;
+	GHOST_2_MOVING = false;
+	GHOST_2_BODY_STATE = 1;
+	GHOST_2_STATE = 0;
+	GHOST_2_EAT_TIMER = null;
+	GHOST_2_AFFRAID_TIMER = null;
+	GHOST_2_AFFRAID_STATE = 0;
 
-	GHOST_OVP_POSITION_X = 238;
-	GHOST_OVP_POSITION_Y = 258;
-	GHOST_OVP_DIRECTION = 3;
-	GHOST_OVP_MOVING_TIMER = -1;
-	GHOST_OVP_MOVING = false;
-	GHOST_OVP_BODY_STATE = 2;
-	GHOST_OVP_STATE = 0;
-	GHOST_OVP_EAT_TIMER = null;
-	GHOST_OVP_AFFRAID_TIMER = null;
-	GHOST_OVP_AFFRAID_STATE = 0;
+	GHOST_3_POSITION_X = 238;
+	GHOST_3_POSITION_Y = 258;
+	GHOST_3_DIRECTION = 3;
+	GHOST_3_MOVING_TIMER = -1;
+	GHOST_3_MOVING = false;
+	GHOST_3_BODY_STATE = 2;
+	GHOST_3_STATE = 0;
+	GHOST_3_EAT_TIMER = null;
+	GHOST_3_AFFRAID_TIMER = null;
+	GHOST_3_AFFRAID_STATE = 0;
 
-	GHOST_GRUNE_POSITION_X = 314;
-	GHOST_GRUNE_POSITION_Y = 258;
-	GHOST_GRUNE_DIRECTION = 4;
-	GHOST_GRUNE_MOVING_TIMER = -1;
-	GHOST_GRUNE_MOVING = false;
-	GHOST_GRUNE_BODY_STATE = 3;
-	GHOST_GRUNE_STATE = 0;
-	GHOST_GRUNE_EAT_TIMER = null;
-	GHOST_GRUNE_AFFRAID_TIMER = null;
-	GHOST_GRUNE_AFFRAID_STATE = 0;
-	GHOST_GRUNE_POSITION_X = 314;
+	GHOST_4_POSITION_X = 314;
+	GHOST_4_POSITION_Y = 258;
+	GHOST_4_DIRECTION = 4;
+	GHOST_4_MOVING_TIMER = -1;
+	GHOST_4_MOVING = false;
+	GHOST_4_BODY_STATE = 3;
+	GHOST_4_STATE = 0;
+	GHOST_4_EAT_TIMER = null;
+	GHOST_4_AFFRAID_TIMER = null;
+	GHOST_4_AFFRAID_STATE = 0;
+	GHOST_4_POSITION_X = 314;
 
-	GHOST_NEOS_POSITION_X = 276;
-	GHOST_NEOS_POSITION_Y = 258;
-	GHOST_NEOS_DIRECTION = 5;
-	GHOST_NEOS_MOVING_TIMER = -1;
-	GHOST_NEOS_MOVING = false;
-	GHOST_NEOS_BODY_STATE = 4;
-	GHOST_NEOS_STATE = 0;
-	GHOST_NEOS_EAT_TIMER = null;
-	GHOST_NEOS_AFFRAID_TIMER = null;
-	GHOST_NEOS_AFFRAID_STATE = 0;
+	GHOST_0_POSITION_X = 276;
+	GHOST_0_POSITION_Y = 258;
+	GHOST_0_DIRECTION = 5;
+	GHOST_0_MOVING_TIMER = -1;
+	GHOST_0_MOVING = false;
+	GHOST_0_BODY_STATE = 4;
+	GHOST_0_STATE = 0;
+	GHOST_0_EAT_TIMER = null;
+	GHOST_0_AFFRAID_TIMER = null;
+	GHOST_0_AFFRAID_STATE = 0;
 }
 function getGhostCanevasContext(ghost) {
 	return eval('GHOST_' + ghost.toUpperCase() + '_CANVAS_CONTEXT');
 }
 
 function drawGhosts() {
-	drawGhost("spo");
-	drawGhost('fpo');
-	drawGhost('ovp');
-	drawGhost("grune");
-	drawGhost("neos");
+	drawGhost("0");
+	drawGhost('1');
+	drawGhost('3');
+	drawGhost("4");
+	drawGhost("2");
 }
 function drawGhost(ghost) {
 
@@ -190,11 +189,11 @@ function affraidGhosts() {
 
 	SCORE_GHOST_COMBO = 200;
 
-	affraidGhost("spo");
-	affraidGhost("fpo");
-	affraidGhost("ovp");
-	affraidGhost("grune");
-	affraidGhost("neos");
+	affraidGhost("0");
+	affraidGhost("1");
+	affraidGhost("3");
+	affraidGhost("4");
+	affraidGhost("2");
 }
 function affraidGhost(ghost) {
 	if ( eval('GHOST_' + ghost.toUpperCase() + '_AFFRAID_TIMER !== null') ) {
@@ -221,18 +220,18 @@ function cancelAffraidGhost(ghost) {
 }
 function testStateGhosts() {
 
-	if ( GHOST_SPO_STATE === 1 ||
-		 GHOST_FPO_STATE === 1 ||
-		 GHOST_OVP_STATE === 1 ||
-		 GHOST_GRUNE_STATE === 1 ||
-		 GHOST_NEOS_STATE === 1
+	if ( GHOST_1_STATE === 1 ||
+		 GHOST_2_STATE === 1 ||
+		 GHOST_3_STATE === 1 ||
+		 GHOST_4_STATE === 1 ||
+		 GHOST_0_STATE === 1
 	) {
 		playWazaSound();
-	} else if ( GHOST_SPO_STATE === -1 ||
-		 GHOST_FPO_STATE === -1 ||
-		 GHOST_OVP_STATE === -1 ||
-		 GHOST_GRUNE_STATE === -1 ||
-		 GHOST_NEOS_STATE === -1
+	} else if ( GHOST_1_STATE === -1 ||
+		 GHOST_2_STATE === -1 ||
+		 GHOST_3_STATE === -1 ||
+		 GHOST_4_STATE === -1 ||
+		 GHOST_0_STATE === -1
 	) {
 		playGhostEatenSound();
 	} else {
@@ -279,7 +278,7 @@ function eatGhostPopup(ghost){
 	$(".ghost-popup-container").css('border-color', eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
 	if(value!="")$("#ghost-von").html("Von: "+ value);
 	else $("#ghost-von").html("Von: Unbekannt");
-	$("#ghost-name").html("An: "+ texts[ghost.toUpperCase()].name);
+	$("#ghost-name").html("An: "+ texts.ghosts[Number(ghost)].name_short);
 	$("#ghost-text").html(texts.themen[themenFeld].twitter);
 	$("#ghost-text").removeClass();
 	$("#ghost-text").addClass("thema_"+themenFeld);
@@ -293,11 +292,11 @@ function eatGhostPopup(ghost){
 	}
 
 	$("#ghost-name").css("color",eval('GHOST_' + ghost.toUpperCase() + '_COLOR'));
-	var newMail = "mailto:"+texts[ghost.toUpperCase()].email_adress
+	var newMail = "mailto:"+texts.ghosts[Number(ghost)].email_adress
 								+"?subject="+texts.themen[themenFeld].email_betreff
-								+"&body="+texts[ghost.toUpperCase()].email_introduction+texts.themen[themenFeld].email_text;
+								+"&body="+texts.ghosts[Number(ghost)].email_introduction+texts.themen[themenFeld].email_text;
 	$("#ghost-email").attr("href", newMail);
-	var newTweet = "https://twitter.com/intent/tweet?hashtags=WeWantYou&text="+texts.themen[themenFeld].twitter+" "+texts[ghost.toUpperCase()].twitter_handler +"&tw_p=tweetbutton&url=https://anders-handeln.at/pledge-2019"
+	var newTweet = "https://twitter.com/intent/tweet?hashtags=WeWantYou&text="+texts.themen[themenFeld].twitter+" "+texts.ghosts[Number(ghost)].twitter_handler +"&tw_p=tweetbutton&url=https://anders-handeln.at/pledge-2019"
 	$("#ghost-tweet").attr("href", newTweet);
 
 	function gaevent() {
@@ -385,11 +384,11 @@ function cancelEatGhost(ghost) {
 }
 
 function moveGhosts() {
-	moveGhost("spo");
-	moveGhost('fpo');
-	moveGhost('ovp');
-	moveGhost("grune");
-	moveGhost("neos");
+	moveGhost("0");
+	moveGhost('1');
+	moveGhost('3');
+	moveGhost("4");
+	moveGhost("2");
 }
 function moveGhost(ghost) {
 
@@ -498,7 +497,7 @@ function changeDirection(ghost) {
 			var pacmanX = PACMAN_POSITION_X;
 			var pacmanY = PACMAN_POSITION_Y;
 			var axe = oneAxe();
-			if (ghost === "spo") {
+			if (ghost === "0") {
 
 				var nothing = whatsYourProblem();
 				if (nothing < 6) {
@@ -510,7 +509,7 @@ function changeDirection(ghost) {
 					}
 				}
 
-			} else if (ghost === "fpo") {
+			} else if (ghost === "1") {
 
 				var nothing = whatsYourProblem();
 				if (nothing < 3) {
@@ -524,7 +523,7 @@ function changeDirection(ghost) {
 					tryDirection = reverseDirection(tryDirection);
 				}
 
-			} else if (ghost === "ovp") {
+			} else if (ghost === "3") {
 				var good = anyGoodIdea();
 				if (good < 3) {
 					tryDirection = getRightDirection(axe, ghostX, ghostY, pacmanX, pacmanY);
@@ -534,7 +533,7 @@ function changeDirection(ghost) {
 						tryDirection = getRightDirection(axe, ghostX, ghostY, pacmanX, pacmanY);
 					}
 				}
-			} else if (ghost === "neos") {
+			} else if (ghost === "2") {
 				var good = anyGoodIdea();
 				if (good < 3) {
 					tryDirection = getRightDirection(axe, ghostX, ghostY, pacmanX, pacmanY);
@@ -618,11 +617,11 @@ function eraseGhost(ghost) {
 }
 function eraseGhosts() {
 
-	eraseGhost('spo');
-	eraseGhost('fpo');
-	eraseGhost('ovp');
-	eraseGhost('grune');
-	eraseGhost('neos');
+	eraseGhost('0');
+	eraseGhost('1');
+	eraseGhost('3');
+	eraseGhost('4');
+	eraseGhost('2');
 }
 
 function canMoveGhost(ghost, direction) {
@@ -695,11 +694,11 @@ function stopGhost(ghost) {
 	}
 }
 function stopGhosts() {
-	stopGhost('spo');
-	stopGhost('fpo');
-	stopGhost('ovp');
-	stopGhost('grune');
-	stopGhost('neos');
+	stopGhost('0');
+	stopGhost('1');
+	stopGhost('3');
+	stopGhost('4');
+	stopGhost('2');
 }
 
 function pauseGhost(ghost) {
@@ -716,11 +715,11 @@ function pauseGhost(ghost) {
 	}
 }
 function pauseGhosts() {
-	pauseGhost('spo');
-	pauseGhost('fpo');
-	pauseGhost('ovp');
-	pauseGhost('grune');
-	pauseGhost('neos');
+	pauseGhost('0');
+	pauseGhost('1');
+	pauseGhost('3');
+	pauseGhost('4');
+	pauseGhost('2');
 }
 
 function resumeGhost(ghost) {
@@ -732,11 +731,11 @@ function resumeGhost(ghost) {
 	moveGhost(ghost);
 }
 function resumeGhosts() {
-	resumeGhost('spo');
-	resumeGhost('fpo');
-	resumeGhost('ovp');
-	resumeGhost('grune');
-	resumeGhost('neos');
+	resumeGhost('0');
+	resumeGhost('1');
+	resumeGhost('3');
+	resumeGhost('4');
+	resumeGhost('2');
 }
 
 function drawHelperGhost(ctx, x, y, d, b, s, a) {
