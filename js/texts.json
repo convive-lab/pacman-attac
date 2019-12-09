@@ -1,59 +1,59 @@
 {
-  "SPO":
-    {"twitter_handler":"@rendiwagner",
-     "name":"Rendi-Wagner",
-     "email_introduction":"Sehr geehrte Frau Rendi-Wagner,%0D%0A%0D%0A ",
-     "email_adress":"pamela.rendi-wagner@​parlament.gv.at"
+   "BADEN WUERTTEMBERG":{
+      "twitter_handler":"@GrueneBW",
+      "name":"Winfried Kretschmann",
+      "email_introduction":"Liebe Grüne Baden-Württemberg,%0D%0A%0D%0A ",
+      "email_adress":"landesverband@gruene-bw.de"
    },
-   "OVP":
-     {"twitter_handler":"@sebastiankurz",
-      "name":"Kurz",
-      "email_introduction":"Sehr geehrter Herr Kurz,%0D%0A%0D%0A ",
-      "email_adress":"team@sebastian-kurz.at"
-    },
-    "FPO":
-      {"twitter_handler":"@norbertghofer",
-       "name":"Hofer",
-       "email_introduction":"Sehr geehrter Herr Hofer,%0D%0A%0D%0A ",
-       "email_adress":"volker.hoeferl@fpoe.at"
-    },
-    "GRUNE":
-     {"twitter_handler":"@WKogler",
-      "name":"Kogler",
-      "email_introduction":"Sehr geehrter Herr Kogler,%0D%0A%0D%0A ",
-      "email_adress":"werner.kogler@gruene.at"
-    },
-    "NEOS":
-      {"twitter_handler":"@BMeinl⁩",
-       "name":"Meinl-Reisinger",
-       "email_introduction":"Sehr geehrte Frau Meinl-Reisinger,%0D%0A%0D%0A ",
-       "email_adress":"beate.meinl@​neos.eu"
-    },
-    "themen":{
+   "BRANDENBURG":{
+      "twitter_handler":"@GrueneBBG",
+      "name":"Ursula Nonnenmacher",
+      "email_introduction":"Liebe Grüne Brandenburg,%0D%0A%0D%0A ",
+      "email_adress":"info@gruene-brandenburg.de"
+   },
+   "HAMBURG":{
+      "twitter_handler":"@GRUENE_Hamburg",
+      "name":"Katharina Fegebank",
+      "email_introduction":"Liebe Grüne Hamburg,%0D%0A%0D%0A ",
+      "email_adress":"info@hamburg.gruene.de "
+   },
+   "HESSEN":{
+      "twitter_handler":"@gruenehessen",
+      "name":"Tarek Al-Wazir",
+      "email_introduction":"Liebe Grüne Hessen,%0D%0A%0D%0A ",
+      "email_adress":"landesverband@gruene-hessen.de"
+   },
+   "RHEINLAND-PFALZ":{
+      "twitter_handler":"@gruene_rlp⁩",
+      "name":"Ulrike Höfken",
+      "email_introduction":"Liebe Grüne Rheinland-Pfalz,%0D%0A%0D%0A ",
+      "email_adress":"lgs@gruene-rlp.de"
+   },
+   "themen":{
       "0":{
-        "twitter":"Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Jetzt Verpflichtungserklärung gegen ISDS unterzeichnen!",
-        "email_betreff":"Unsere öffentlichen Güter schützen – nein zu ISDS",
-        "email_text":"die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert. Sie richten sich gegen Gewährleistung öffentlicher Güter und Rekommunalisierung. Zum Beispiel wollte die estnische Hauptstadt Tallin eine Obergrenze für Wasserpreise festlegen und erhielt dafür eine Klage über 90 Millionen Euro (https://www.neues-deutschland.de/artikel/968257.schiedsgericht-verhandelt-wasserpolitik.html). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen!%0D%0A%0D%0A Jetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte unterzeichnen! https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
+         "twitter":"CETA bedeutet höhere Importquoten von Rind- und Schweinefleisch. Das ist eine Gefahr für die nachhaltige bäuerliche Landwirtschaft. Stimmen Sie deshalb im #Bundesrat gegen #CETA! Mehr Argumente: www.attac.de/ceta-stoppen #StopCETA",
+         "email_betreff":"Verhindern Sie den Ausverkauf der bäuerlichen Landwirtschaft – stoppen Sie CETA!",
+         "email_text":"durch CETA werden die Importquoten von kanadischem Schweine- und Rindfleisch aus der industriellen Landwirtschaft deutlich erhöht. Das Canadian Meat Council hat  bereits gefordert, dass auch Fleisch, das mit Hormonen und Beta-Agonisten erzeugt wurde, nach Europa exportieren zu dürfen. (https://www.abl-ev.de/apendix/news/details/?tx_ttnews%5Btt_news%5D=2411&cHash=70f870c998e830e65cc1c2f8961b4bf8) %0D%0A%0D%0A Das ist eine Gefahr für die nachhaltige bäuerliche Landwirtschaft. Stimmen Sie deshalb im Bundesrat gegen CETA! %0D%0A%0D%0A Mehr Argumente gegen CETA finden Sie auch unter attac.de/ceta-stoppen %0D%0A%0D%0A Mit freundlichen Grüßen, %0D%0A%0D%0A"
       },
       "1":{
-        "twitter":"ISDS-Sonderklagerechte in Handels- und Investitionsabkommen richten sich gegen nationale Souveränität. Kroatien wurde von einem Investor auf über 500 Mio. Dollar verklagt! Jetzt Erklärung gegen ISDS unterzeichnen!",
-        "email_betreff":"Nationale Souveränität schützen – keine Sonderklagerechte für Konzerne",
-        "email_text":"Die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen nationale Souveränität und lokale Demokratie. %0D%0A%0D%0A Abkommen mit den gefährlichen ISDS-Sonderklagerechten für Konzerne untergraben Handlungsmöglichkeiten der Bevölkerung. Die BewohnerInnen von Dubrovnik in Kroatien protestierten jahrelang gegen ein Luxus Golf Resort, das die Baugenehmigungen auf illegale Weise erworben hatte. Nun verklagte der Investor Kroatien auf über 500 Millionen US Dollar (https://www.youtube.com/watch?v=fZSC3IzcjBs). Auch Österreich wird bereits zum zweiten Mal von der Meinl Bank verklagt. Das kann so nicht weitergehen!%0D%0A%0D%0A Unterzeichen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte: https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
+         "twitter":"CETA hebelt das Vorsorgeprinzip aus. Möglicherweise krebserregende Chemikalien kommen so auf den Markt, das ist eine Gefahr für die Verbraucher*innen. Stimmen Sie deshalb im #Bundesrat gegen #CETA! Mehr Argumente: www.attac.de/ceta-stoppen #StopCETA",
+         "email_betreff":"Erhalten Sie das Vorsorgeprinzip – stoppen Sie CETA!",
+         "email_text":"CETA höhlt das in der EU geltende Vorsorgeprinzip aus; dies garantiert, dass nur unbedenkliche Produkte auf den Markt kommen dürfen. Gesundheitsschädliche Produkte wie Kosmetika mit hormonell wirksamen Schadstoffen könnten durch CETA leichter in den Handel gelangen. (https://www.bund.net/fileadmin/user_upload_bund/publikationen/ttip_und_ceta/ttip_und_ceta_vorsorgeprinzip_hormonelle_schadstoffe.pdf) %0D%0A%0D%0A Das ist eine Gefahr für den Verbraucherschutz. Stimmen Sie deshalb im Bundesrat gegen CETA! %0D%0A%0D%0A Mehr Argumente gegen CETA finden Sie auch unter attac.de/ceta-stoppen %0D%0A%0D%0A Mit freundlichen Grüßen, %0D%0A%0D%0A"
       },
       "2":{
-        "twitter":"Gefährliche ISDS-Sonderklagerechte richten sich gegen die Gesundheit von KonsumentInnen. US-Konzern verklagte eine kanadische Provinz, weil sie ein giftiges Pestizid verbieten wollte! Unterschreiben Sie jetzt gegen ISDS!",
-        "email_betreff":"Für unsere Gesundheit  – gegen Sonderklagerechte",
-        "email_text":"in Handels- und Investitionsabkommen sind gefährliche ISDS-Sonderklagerechte enthalten, die sich gegen die Gesundheit von KonsumentInnen und nachhaltige Landwirtschaft richten. %0D%0A%0D%0A Zum Beispiel klagte das US-amerikanische Unternehmen Dow AgroSciences,  weil die Provinz Quebec ein toxisches Pestizid mit nachweislich erhöhten Krebsraten und Geburtsdefekten verbieten wollte (https://www.attac.at/kampagnen/stopp-isds/aktionstage.html). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt.%0D%0A%0D%0A Das kann so nicht weitergehen! Unterzeichnen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
+         "twitter":"CETA unterstützt  den Import von besonders klimaschädlichem Öl aus kanadischen Teersanden. Das widerspricht dem Pariser Klimaschutzabkommen. Stimmen Sie deshalb im #Bundesrat gegen #CETA! Mehr Argumente: www.attac.de/ceta-stoppen #StopCETA",
+         "email_betreff":"Retten Sie das Klima – stoppen Sie CETA!",
+         "email_text":"es gibt in CETA keine verbindlichen und einklagbaren Umweltstandards. Außerdem können Konzerne gegen effektive Klimaschutzmaßnahmen klagen. So können durch die Hintertür Fracking oder Gentechnik erlaubt werden. (https://www.attac.de/fileadmin/user_upload/Kampagnen/ttip/Der_grosse_CETA_Schwindel.pdf) %0D%0A%0D%0A Das ist eine Gefahr für die Umwelt. Stimmen Sie deshalb im Bundesrat gegen CETA! %0D%0A%0D%0A Mehr Argumente gegen CETA finden Sie auch unter attac.de/ceta-stoppen %0D%0A%0D%0A Mit freundlichen Grüßen, %0D%0A%0D%0A"
       },
       "3":{
-        "twitter":"Achtung: Gefährliche ISDS-Sonderklagerechte in Investitionsabkommen verhindern Klimaschutz! Italien wird von einem Ölkonzern verklagt, weil sich die Bevölkerung erfolgreich gegen Ölbohrungen an der Adria wehrte.",
-        "email_betreff":"Werden Sie aktiv gegen Konzern-Privilegien!",
-        "email_text":"die Profitinteressen von Konzernen werden in Handels- und Investitionsabkommen zementiert und richten sich gegen Klimaschutz. Abkommen mit ISDS-Sonderklagerechten von Konzernen ermöglichen es zum Beispiel, dass Italien auf Grundlage des Energiecharta-Vertrags vom britischen Unternehmen Rockhopper verklagt wird, weil sich die lokale Bevölkerung an der Adria gegen Ölbohrungen vor ihrer Haustür erfolgreich wehrte (https://www.attac.at/kampagnen/stopp-isds/isds-faelle.html). Auch Österreich wird bereits das zweite Mal von der Meinl Bank verklagt. %0D%0A%0D%0A Das kann so nicht weitergehen! Unterzeichnen Sie jetzt die Verpflichtungserklärung gegen ISDS-Sonderklagerechte! https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
+         "twitter":"CETA erhöht den Druck, öffentliche Dienstleistungen zu privatisieren und macht es schwieriger, privatisierte Dienstleistungen wieder zu rekommunalisieren. Stimmen Sie deshalb im #Bundesrat gegen #CETA! Mehr Argumente: www.attac.de/ceta-stoppen #StopCETA",
+         "email_betreff":"Retten Sie den Sozialstaat – stoppen Sie CETA!",
+         "email_text":"CETA liefert die in jahrzehntelangen Kämpfen errungenen soziale Mindeststandards Konzernklagen aus. Außerdem macht das Abkommen wichtige Stellschrauben für einen starken Sozialstaat wie Rekommunalisierung und Vermögenssteuern praktisch unmöglich. (https://www.attac.de/fileadmin/user_upload/Kampagnen/ttip/Der_grosse_CETA_Schwindel.pdf)  %0D%0A%0D%0A Das ist eine Gefahr für den Sozialstaat. Stimmen Sie deshalb im Bundesrat gegen CETA!  %0D%0A%0D%0A Mehr Argumente gegen CETA finden Sie auch unter attac.de/ceta-stoppen  %0D%0A%0D%0A Mit freundlichen Grüßen, %0D%0A%0D%0A"
       },
       "4":{
-        "twitter":"Mehr Investionsabkommen=mehr Investitionen? Falsch, empirische Belege fehlen. Aber sie enthalten gefährliche ISDS-Sonderklagerechte! In über 900 Fällen wurden Staaten von Konzernen verklagt. Jetzt Menschenrechte schüzen.",
-        "email_betreff":"Menschenrechte unter Beschuss: Jetzt gegen ISDS unterzeichnen",
-        "email_text":"es gibt keine empirische Belege dafür, dass Investitions-Abkommen alleine zu mehr Investitionen führen. Die ISDS-Sonderklagerechte darin sind sogar gefährlich, in über 900 Fällen wurden Staaten schon von Konzernen verklagt, u.a. weil sie Menschenrechte geschützt haben. Die Klagerechte in Kombination mit zahnlosen internationalen Konventionen führen zu krasser Ausbeutung: So arbeiten beispielsweise in Ghana trotz internationaler Konventionen rund zwei Millionen Kinder auf Kakaoplantagen, deren Kakao auch in österreichischen Supermärkten landet. %0D%0A%0D%0A Jetzt Verpflichtungserklärung gegen ISDS-Sonderklagerechte und für Menschenrechte unterzeichnen! https://www.anders-handeln.at/pledge-2019 %0D%0A%0D%0A Mit freundlichen Grüßen %0D%0A%0D%0A"
+         "twitter":"Mit der Ratifizierung von CETA erhalten Konzerne in den Vertragsstaaten Sonderklagerechte, mit denen sie hohe Schadensersatzforderungen an die Staaten richten könnten. Stimmen Sie deshalb im #Bundesrat gegen #CETA! Mehr Argumente: www.attac.de/ceta-stoppen #StopCETA",
+         "email_betreff":"Verhindern Sie Konzernklagen – stoppen Sie CETA!",
+         "email_text":"Mit der vollständigen Ratifizierung von CETA würde auch das sogenannte Investitionsgerichtssystem in Kraft treten. Dann können dort ansässige Konzerne die Vertragsstaaten Entschädigungszahlungen verklagen, wenn ihre Gewinne beispielsweise durch Umwelt-oder Verbraucher*innenschutzmaßnahmen gemindert werden könnten. Weder Regierungen oder Gemeinden noch zivilgesellschaftliche Gruppen oder Privatpersonen können vor einem solchen Investitionsgericht Klage einreichen, wenn ihre Rechte durch Investoren verletzt werden. International tätige Konzerne erhalten also weitreichende Rechte, umgekehrt aber keine Pflichten, die den Schutz von Menschenrechten und der Umwelt betreffen. (https://www.attac.de/fileadmin/user_upload/Kampagnen/ttip/Der_grosse_CETA_Schwindel.pdf) %0D%0A%0D%0A Das ist eine Gefahr für den Rechtsstaat und schafft Konzernprivilegien. Stimmen Sie deshalb im Bundesrat gegen CETA! %0D%0A%0D%0A Mehr Argumente gegen CETA finden Sie auch unter attac.de/ceta-stoppen %0D%0A%0D%0A Mit freundlichen Grüßen, %0D%0A%0D%0A"
       }
-    }
+   }
 }
