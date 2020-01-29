@@ -325,6 +325,7 @@ function gameover() {
 	'event_label': "game over",
 	});
 	GAMEOVER = true;
+	$("#engage-popup").show();
 	$("#engage-popup").css('display',"flex");
 
 	message("game over");

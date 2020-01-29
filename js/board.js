@@ -1,6 +1,7 @@
 var BOARD_CANVAS_CONTEXT = null;
 
 function initBoard() {
+	$('#board').show();
 	var canvas = document.getElementById('canvas-board');
 	canvas.setAttribute('width', '550');
 	canvas.setAttribute('height', '550');

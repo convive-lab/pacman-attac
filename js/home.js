@@ -62,7 +62,6 @@ function initHome() {
 	PACMAN_DEAD = false;
 	$("#engage-popup").hide();
 	$("#game").removeClass("started");
-
 	$("#panel").hide();
 	$("#home").show();
 	$("#home h3 em").append( " - " + new Date().getFullYear() );
@@ -100,6 +99,7 @@ function initHome() {
 
 }
 function drawPresentation(){
+	$("#presentation").show();
 	var ctx = null;
 	var canvas = null;
 	canvas = document.getElementById('canvas-presentation-0');
